@@ -36,7 +36,6 @@ NOT_FOUND_MARKER = b"not in the archive"  # hosting/404.html
 PAGES = [
     ("/", "text/html"),
     ("/index.htm", "text/html"),
-    ("/index-p2.htm", "text/html"),
     ("/info-song51362.htm", "text/html"),
     ("/authors-authora.htm", "text/html"),
     ("/research-author4-mat-7db735.htm", "text/html"),
@@ -85,10 +84,10 @@ def fetch(url: str, method: str = "GET", data: bytes | None = None) -> tuple[int
 
 
 def url_map_samples() -> list[tuple[str, str]]:
-    """First old query URL of each kind from build-meta/url-map.json (paging, groups)."""
+    """First old query URL of each kind from build-meta/url-map.json (songs, authors, oneliner days, news)."""
     urls = json.loads((bunny.REPO_ROOT / "build-meta" / "url-map.json").read_text())["urls"]
     out = []
-    for needle in ("/nicklist.htm?idgroup=", "/index.htm?idcat=", "/boo.htm?", "/piclib.htm?"):
+    for needle in ("/info.htm?idsong=", "/research.htm?author=", "/olhistory.htm?", "/commentnews.htm?id="):
         old = next((k for k in sorted(urls) if needle in k), None)
         if old:
             out.append((old, urls[old]))
