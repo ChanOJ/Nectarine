@@ -1,0 +1,493 @@
+/* MAIN CSS */
+@font-face {
+    font-family: Amiga Forever, verdana;
+    font-style:  normal;
+    font-weight: normal;
+    src: url(/z/n/skin/amiga13/AMIGAFO0.eot);
+}
+body {
+background-image: url(/z/n/skin/amiga/bgblue.gif);
+}
+hr {border: none 0; 
+border-bottom: 1px solid #000;
+width: 100%;
+margin: 5px auto 5 px;
+text-align: left;
+}
+UL {
+list-style: round;
+font: 10px "Verdana";
+padding:0px;
+margin:20px;
+}
+/* links */
+a:link {
+font: 10px "Verdana";
+text-decoration: none;
+color: #000;
+}
+a:visited {
+font: 10px "Verdana";
+text-decoration: none;
+color: #990000;
+}
+a:hover {
+font: 10px "Verdana";
+text-decoration: underline;
+color: #fff;
+}
+/* linked picture */
+a img {
+}
+/* table design */
+table{
+}
+td {
+font: 10px "Verdana";
+}
+tr.off {
+font: 10px "Verdana";
+}
+tr.on {
+background: #6182AE;
+font: 10px "Verdana";
+}
+/* CSS FOR THE HEADER */
+table.tableheader{
+background-color: #6182AE;
+border-top:1px solid white;
+border-left:1px solid white;
+border-right:1px solid black;
+border-bottom:1px solid black;
+padding: 3px;
+}
+td.headerlogo {
+background-image: url(/z/n/skin/amiga/l20.gif);
+background-repeat: no-repeat;
+width:600px;
+height:100px;
+}
+td.headerlinks {
+text-align:center;
+}
+td.headerlinks a:link {
+font: 10px "Verdana";
+color:black;
+}
+td.headerlinks a:hover {
+font: 10px "Verdana";
+color:#fff;
+}
+td.headerlinks a:visited {
+font: 10px "Verdana";
+color:black;
+}
+td.headererror{
+text-align:left;
+font: 10px "Verdana";
+color: #990000;
+}
+/* CSS FOR THE FOOTER */
+table.tablefooter{
+background-color: #6182AE;
+width:100%;
+border-top:1px solid white;
+border-left:1px solid white;
+border-right:1px solid black;
+border-bottom:1px solid black;
+text-align: center;
+padding: 3px;
+}
+td.footer{
+width:100%;
+font: 10px "Verdana";
+text-align: center;
+}
+/*FORMS CSS*/
+/*submit for ie*/
+input{
+}
+.submit{
+border-top:1px solid white;
+border-left:1px solid white;
+border-right:1px solid black;
+border-bottom:1px solid black;
+background-color : #6182AE;
+width: 160px;
+font: 10px "Verdana";
+}
+/*submit for firefox*/
+input[type="submit"] {
+border-top:1px solid white;
+border-left:1px solid white;
+border-right:1px solid black;
+border-bottom:1px solid black;
+background-color : #6182AE;
+width: 160px;
+font: 10px "Verdana";
+}
+input[type="password"] {
+border-top:1px solid white;
+border-left:1px solid white;
+border-right:1px solid black;
+border-bottom:1px solid black;
+background-color : #6182AE;
+width: 160px;
+font: 10px "Verdana";
+}
+input[type="text"] {
+border-top:1px solid black;
+border-left:1px solid black;
+border-right:1px solid white;
+border-bottom:1px solid white;
+background-color : #eeeeee;
+width: 160px;
+font: 10px "Verdana";
+}
+select {
+border-top:1px solid white;
+border-left:1px solid white;
+border-right:1px solid black;
+border-bottom:1px solid black;
+background-color : #6182AE;
+width: 160px;
+font: 10px "Verdana";
+}
+/*CSS FOR DESIGN PART*/
+/* playing now */
+.Insert1 {
+background-color: #6182AE;
+border-top:1px solid white;
+border-left:1px solid white;
+border-right:1px solid black;
+border-bottom:1px solid black;
+padding:3px;
+text-align: left;
+font: 10px "Verdana";
+}
+/* playing next */
+.Insert2 {
+background-color: #6182AE;
+border-top:1px solid white;
+border-left:1px solid white;
+border-right:1px solid black;
+border-bottom:1px solid black;
+padding:3px;
+text-align: left;
+font: 10px "Verdana";
+}
+/* queue */
+.Insert3 {
+background-color: #6182AE;
+border-top:1px solid white;
+border-left:1px solid white;
+border-right:1px solid black;
+border-bottom:1px solid black;
+padding:3px;
+text-align: left;
+font: 10px "Verdana";
+}
+/* titles */
+.Insertheader {
+background-color: #6182AE;
+border-top:1px solid white;
+border-left:1px solid white;
+border-right:1px solid black;
+border-bottom:1px solid black;
+padding:3px;
+text-align: left;
+font: 10px "Verdana";
+}
+/*CSS FOR FONT STYLE*/
+.author {
+color: #000000;
+font: 10px "Verdana";
+}
+.title {
+color: #000000;
+font: 10px "Verdana";
+}
+.categorie {
+color: #990000;
+font: 10px "Verdana";
+}
+.user {
+color: #990000;
+font: 10px "Verdana";
+}
+.rank {
+color: #990000;
+font: 10px "Verdana";
+}
+.song {
+color: #000000;
+font: 10px "Verdana";
+}
+.comment {
+color: #000
+text-align: justify;
+font-style: italic;
+font: 10px "Verdana";
+}
+.newscomments {
+color: #000;
+text-align: right;
+font: 10px "Verdana";
+}
+.subject {
+color: #000;
+font: 10px "Verdana";
+}
+.warning {
+color: #990000;
+font: 10px "Verdana";
+}
+/* CSS TO DESIGN BLOCK */
+/* small block LEFT column*/
+.modulesmall {
+}
+.moduletitlesmall {
+height:15px;
+background-image: url(/z/n/skin/amiga/smalltitle.gif);
+font: 10px "Verdana";
+border-top:1px solid white;
+border-left:1px solid white;
+border-right:1px solid black;
+border-bottom:1px solid black;
+}
+.modulecontentsmall {
+background-image: url(/z/n/skin/amiga/bggrey.gif);
+text-align: left;
+padding:3px;
+border-left:1px solid white;
+border-right:1px solid black;
+border-bottom:1px solid black;
+font: 10px "Verdana";
+}
+.modulecontentsmallcentered {
+background-image: url(/z/n/skin/amiga/bggrey.gif);
+text-align: center;
+padding:3px;
+border-left:1px solid white;
+border-right:1px solid black;
+border-bottom:1px solid black;
+font: 10px "Verdana";
+}
+.modulecontentsmalljustified {
+background-image: url(/z/n/skin/amiga/bggrey.gif);
+text-align: justify;
+padding:3px;
+border-left:1px solid white;
+border-right:1px solid black;
+border-bottom:1px solid black;
+font: 10px "Verdana";
+}
+/* small block right column*/
+.rmodulesmall {
+}
+.rmoduletitlesmall {
+height:15px;
+background-image: url(/z/n/skin/amiga/smalltitle.gif);
+font: 10px "Verdana";
+border-top:1px solid white;
+border-left:1px solid white;
+border-right:1px solid black;
+border-bottom:1px solid black;
+}
+.rmodulecontentsmall {
+background-image: url(/z/n/skin/amiga/bggrey.gif);
+text-align: left;
+padding:3px;
+border-left:1px solid white;
+border-right:1px solid black;
+border-bottom:1px solid black;
+font: 10px "Verdana";
+}
+.rmodulecontentsmallcentered {
+background-image: url(/z/n/skin/amiga/bggrey.gif);
+text-align: center;
+padding:3px;
+border-left:1px solid white;
+border-right:1px solid black;
+border-bottom:1px solid black;
+font: 10px "Verdana";
+}
+.rmodulecontentsmalljustify {
+background-image: url(/z/n/skin/amiga/bggrey.gif);
+text-align: justify;
+padding:3px;
+border-left:1px solid white;
+border-right:1px solid black;
+border-bottom:1px solid black;
+font: 10px "Verdana";
+}
+/* BIG block right column (3 or 4 columns layout)*/
+.moduleMedium {
+background-image: url(/z/n/skin/amiga/bggrey.gif);
+border-left:1px solid white;
+border-right:1px solid black;
+border-bottom:1px solid black;
+}
+.moduletitleMedium{
+background-image: url(/z/n/skin/amiga/bigtitle.gif);
+background-repeat: no-repeat;
+background-color: #6182AE;
+border-top:1px solid white;
+border-bottom:1px solid black;
+text-align: left;
+white-space: nowrap;
+font: 10px "Verdana";
+}
+.modulecontentMedium {
+background-image: url(/z/n/skin/amiga/bggrey.gif);
+text-align: left;
+padding:3px;
+font: 10px "Verdana";
+}
+/* BIG block right column (2 columns layout)*/
+.modulebig {
+background-image: url(/z/n/skin/amiga/bggrey.gif);
+border-left:1px solid white;
+border-right:1px solid black;
+border-bottom:1px solid black;
+}
+.moduletitlebig {
+background-image: url(/z/n/skin/amiga/bigtitle.gif);
+background-repeat: no-repeat;
+background-color: #6182AE;
+border-top:1px solid white;
+border-bottom:1px solid black;
+text-align: left;
+white-space: nowrap;
+font: 10px "Verdana";
+}
+.modulecontentbig {
+background-image: url(/z/n/skin/amiga/bggrey.gif);
+text-align: left;
+padding:3px;
+font: 10px "Verdana";
+}
+/* block for popup (magic window, requests etc..)*/
+.pmodulebig {
+background-image: url(/z/n/skin/amiga/bggrey.gif);
+border-left:1px solid white;
+border-right:1px solid black;
+border-bottom:1px solid black;
+}
+.pmoduletitlebig {
+background-image: url(/z/n/skin/amiga/bigtitle.gif);
+background-repeat: no-repeat;
+background-color: #6182AE;
+border-top:1px solid white;
+border-bottom:1px solid black;
+text-align: left;
+white-space: nowrap;
+font: 10px "Verdana";
+}
+.pmodulecontentbig {
+background-image: url(/z/n/skin/amiga/bggrey.gif);
+text-align: left;
+padding:3px;
+font-family: Amiga Forever, verdana;
+font-size:8px;
+}
+.pmodulecontentbigcentered {
+background-image: url(/z/n/skin/amiga/bggrey.gif);
+text-align: center;
+padding:3px;
+font: 10px "Verdana";
+}
+/* CSS NEWS */
+.newscontent {
+text-align: justify;
+padding:3px;
+font: 10px "Verdana";
+}
+
+/*VARIOUS CSS FOR DESIGN*/
+.ok {
+color: #000000;
+font-weight: bold;
+font: 10px "Verdana";
+}
+.expandcollapse{
+color: #fff;
+font: 10px "Verdana";
+text-decoration: none;
+}
+/* CSS TO HIDE DIV DO NOT MODIFY */
+.cachediv {
+height: 1px;
+margin-top: -1px;
+overflow: hidden;
+position: absolute;
+visibility: hidden;
+}
+.cadre {
+border: 1px solid #000000;
+}
+.collapse {
+text-decoration: none;
+}
+
+.approved {
+color: #009900;
+}
+.pending {
+color: #fff;
+}
+.refused {
+color: #990000;
+}
+
+/* CSS FOR THE DESIGN */
+/*the text at top left*/
+#textleft {
+text-align: left;
+font: 10px "Verdana";
+color:white;
+}
+/*the text at top middle*/
+#textmiddle {
+text-align: center;
+font: 10px "Verdana";
+color:white;
+}
+/*the text at top right*/
+#textright {
+text-align: right;
+font: 10px "Verdana";
+color:white;
+}
+/* CSS FOR DESIGN, do not modify if you don't know what you do */
+/* the screen */
+table.tablecontent{
+width:99%;
+}
+/* center column */
+td.centercontent{
+vertical-align: top;
+padding-left: 3px;
+padding-right: 3px;
+font: 10px "Verdana";
+}
+/* left column */
+td.leftcontent{
+width:200px;
+vertical-align: top;
+padding: 0px;
+font: 10px "Verdana";
+}
+/* right column */
+td.rightcontent{
+width:200px;
+vertical-align: top;
+padding: 0px;
+font: 10px "Verdana";
+}
+/* 2nd right column (ads)*/
+td.rightpubcontent{
+width:200px;
+vertical-align: top;
+text-align: center;
+padding: 0px;

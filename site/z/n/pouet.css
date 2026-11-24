@@ -1,0 +1,412 @@
+td.border{
+	font : 9pt Tahoma;
+	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	border : 1px solid #000;
+	padding : 3px;
+}
+body { 
+	font : 9pt Tahoma;
+	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	margin : 0px;
+	color : #FFFFFF;
+	background-color : #3A6EA5;
+	background : url(/z/n/skin/pouet/trumpet.gif);
+	scrollbar-3d-light-color : #224488;
+	scrollbar-arrow-color : #224488;
+	scrollbar-base-color : #3A6EA5;
+	scrollbar-dark-shadow-color : #224488;
+	scrollbar-face-color : #224488;
+	scrollbar-highlight-color : #224488;
+	scrollbar-shadow-color : #224488;
+	scrollbar-track-color : #3A6EA5;
+}
+td {
+	font : 9pt Tahoma;
+	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+}
+td.border{
+	font : 9pt Tahoma;
+	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	border : 1px solid #000;
+}
+tr.border{
+	font : 9pt Tahoma;
+	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	border : 1px solid #000;
+}
+
+a:link {
+	color : #9FCFFF;
+	text-decoration : none;
+}
+a:visited {
+	color : #9FCFFF;
+	text-decoration : none;
+}
+a:active {
+	color : #9FCFFF;
+	text-decoration : none;
+}
+a:hover {
+	color : #9FCFFF;
+	text-decoration : underline;
+}
+input, select, option, textarea {
+	font : 9pt Tahoma;
+	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+}
+
+.bg1 {
+	color: #fff;
+	background-color: #579;
+}
+
+.bg2 {
+	color: #fff;
+	background-color: #468;
+}
+
+.bg3 {
+	color: #fff;
+	background-color: #68a;
+}
+
+
+
+form
+{
+margin:0;
+padding:0;
+}
+/* MAIN CSS */
+hr {border: none 0; 
+}
+.submit
+{
+clear: both;
+color: #000;
+background: #EEEEEE;
+border: 2px #EEEEEE outset
+}
+UL {
+color:#9FCFFF;
+padding:0px;
+margin:20px;
+}
+/* linked picture */
+a img {
+border: 0px;
+}
+/* table design */
+table{
+}
+tr.off {
+}
+tr.on {
+background: #468;
+}
+/* CSS FOR THE HEADER */
+table.tableheader{
+padding: 3px;
+}
+td.headerlogo {
+background-image: url(/z/n/skin/pouet/raist1.gif);
+width:444px;
+height:194px;
+}
+td.headerlinks {
+text-align:center;
+}
+td.headerlinks a:link {
+color:#9FCFFF;
+}
+td.headerlinks a:hover {
+}
+td.headerlinks a:visited {
+}
+td.headererror{
+text-align:left;
+color: #9FCFFF;
+font-weight: bold;
+}
+/* CSS FOR THE FOOTER */
+table.tablefooter{
+width:100%;
+background-color: #579;
+border: 2px solid #000;
+text-align: center;
+padding: 3px;
+}
+td.footer{
+width:100%;
+text-align: center;
+}
+
+/*FORMS CSS*/
+/*submit for ie*/
+input{
+}
+input[type="password"] {
+}
+input[type="text"] {
+}
+select {
+}
+/*CSS FOR DESIGN PART*/
+/* playing now */
+.Insert1 {
+padding:3px;
+}
+/* playing next */
+.Insert2 {
+padding:3px;
+}
+/* queue */
+.Insert3 {
+padding:3px;
+}
+/* titles */
+.Insertheader {
+padding:3px;
+color:#9FCFFF;
+}
+/*CSS FOR FONT STYLE*/
+.author {
+color: #9FCFFF;
+}
+.title {
+color: #9FCFFF;
+}
+.categorie {
+color: #9FCFFF;
+}
+.user {
+color: #9FCFFF;
+}
+.rank {
+color: #9FCFFF;
+}
+.song {
+color: #9FCFFF;
+}
+.comment {
+color: #000
+text-align: justify;
+font-style: italic;
+}
+.newscomments {
+color: #000;
+text-align: right;
+}
+.subject {
+color: #9FCFFF;
+font-weight:bold;
+}
+.warning {
+color: #9FCFFF;
+font-weight: bold;
+}
+/* CSS TO DESIGN BLOCK */
+/* small block LEFT column*/
+.modulesmall {
+border: 2px solid #000;
+}
+.moduletitlesmall {
+height:16px;
+background-color : #248;
+border-bottom: 1px solid #000;
+font-weight:bold;
+}
+.modulecontentsmall {
+background-color: #579;
+text-align: left;
+padding:3px;
+}
+.modulecontentsmallcentered {
+background-color: #579;
+padding:3px;
+text-align: center;
+}
+.modulecontentsmalljustified {
+background-color: #579;
+padding:3px;
+text-align: justify;
+}
+.modulefootersmall {
+}
+/* small block right column*/
+.rmodulesmall {
+border: 2px solid #000;
+}
+.rmoduletitlesmall {
+height:16px;
+background-color : #248;
+border-bottom: 1px solid #000;
+font-weight:bold;
+}
+.rmodulecontentsmall {
+background-color: #579;
+text-align: left;
+padding:3px;
+}
+.rmodulecontentsmallcentered {
+text-align: center;
+background-color: #579;
+padding:3px;
+}
+.rmodulecontentsmalljustify {
+text-align: justify;
+background-color: #579;
+padding:3px;
+}
+.rmodulefootersmall {
+}
+/* BIG block right column (3 or 4 columns layout)*/
+.moduleMedium {
+border: 2px solid #000;
+}
+.moduletitleMedium{
+height:16px;
+background-color : #248;
+border-bottom: 1px solid #000;
+font-weight:bold;
+}
+.modulecontentMedium {
+padding:3px;
+background-color: #579;	
+}
+/* BIG block right column (2 columns layout)*/
+.modulebig {
+border: 2px solid #000;
+}
+.moduletitlebig {
+background-color : #248;
+height:16px;
+text-align: left;
+white-space: nowrap;
+border-bottom: 1px solid #000;
+font-weight:bold;
+}
+.modulecontentbig {
+background-color: #579;	
+padding:3px;
+text-align: left;
+}
+/* block for popup (magic window, requests etc..)*/
+.pmodulebig {
+border: 2px solid #000;
+}
+.pmoduletitlebig {
+background-color : #248;
+height:16px;
+text-align: left;
+white-space: nowrap;
+border-bottom: 1px solid #000;
+font-weight:bold;
+}
+.pmodulecontentbig {
+background-color: #579;	
+padding:3px;
+text-align: left;
+}
+.pmodulecontentbigcentered {
+background-color: #579;	
+text-align: center;
+padding:3px;
+}
+.modulefooterbig {
+padding:3px;
+}
+/* CSS NEWS */
+.newscontent {
+text-align: justify;
+padding:3px;
+}
+.newscontent img {
+margin-bottom: 3px;
+margin-right: 3px;
+margin-top: 3px;
+}
+/*VARIOUS CSS FOR DESIGN*/
+.ok {
+color: #9FCFFF;
+font-weight: bold;
+}
+.expandcollapse{
+color: #9FCFFF;
+text-decoration: none;
+}
+/* CSS TO HIDE DIV DO NOT MODIFY */
+.cachediv {
+height: 1px;
+margin-top: -1px;
+overflow: hidden;
+position: absolute;
+visibility: hidden;
+}
+.cadre {
+border: 2px solid #000000;
+}
+.collapse {
+text-decoration: none;
+}
+.approved {
+color: #9FCFFF;
+font-weight:bold;
+}
+.pending {
+color: #9FCFFF;
+}
+.refused {
+color: #9FCFFF;
+font-style:italic;
+}
+/* CSS FOR THE DESIGN */
+/*the text at top left*/
+#textleft {
+text-align: left;
+color: #9FCFFF;
+}
+/*the text at top middle*/
+#textmiddle {
+text-align: center;
+color: #9FCFFF;
+}
+/*the text at top right*/
+#textright {
+text-align: right;
+color: #9FCFFF;
+}
+/* CSS FOR DESIGN, do not modify if you don't know what you do */
+/* the screen */
+table.tablecontent{
+width:99%;
+border-spacing: 0px; 
+border-collapse: collapse;
+padding: 3px;
+}
+/* center column */
+td.centercontent{
+vertical-align: top;
+padding-left: 3px;
+padding-right: 3px;
+}
+/* left column */
+td.leftcontent{
+width:200px;
+vertical-align: top;
+padding: 0px;
+}
+/* right column */
+td.rightcontent{
+width:200px;
+vertical-align: top;
+padding: 0px;
+}
+/* 2nd right column (ads)*/
+td.rightpubcontent{
+width:200px;
+vertical-align: top;
+text-align: center;
+padding: 0px;
+}

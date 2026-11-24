@@ -1,0 +1,291 @@
+/* MAIN CSS */
+body {
+background-image: url(/z/n/skin/kohina/back.gif);
+scrollbar-3dlight-color: #004110;
+scrollbar-arrow-color: #00FF40;
+scrollbar-darkshadow-color: #004110;
+scrollbar-face-color: #004110;
+scrollbar-highlight-color:#00FF40;
+scrollbar-shadow-color: #00FF40;
+scrollbar-track-color: #004110;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 10px;
+font-weight: bold;
+color:#00ff40;
+}
+hr {border: none 0; 
+border-top: 2px solid #00ff40;
+width: 100%;
+height: 2px;
+margin: 5px auto 5px auto;
+}
+UL, LI {
+list-style-image: url(/z/n/skin/kohina/stream1.gif);
+padding:0px;
+margin-left:12px;
+}
+/* links */
+a {
+text-decoration: none;
+color: #00ff40;
+}
+a:link {
+color: #00ff40;
+text-decoration: none;
+}
+a:visited {
+color: #00ff40;
+text-decoration: none;
+}
+a:hover {
+color: #00ff40;
+text-decoration: underline;
+}
+/* linked picture */
+a img {
+}
+/* table design */
+table{
+padding: 5px;
+width: 100%;
+}
+td {
+font-size: 0.7em;
+vertical-align: top;
+padding: 2px;
+}
+tr.off {
+}
+tr.on {
+}
+/* CSS FOR THE HEADER */
+table.tableheader{
+
+border: 1px #00ff40 solid;
+}
+td.headerlogo {
+background-image: url(/z/n/skin/kohina/logo.gif);
+background-repeat: no-repeat;
+width:600px;
+height:100px;
+}
+td.headerlinks {
+font-weight: bold;
+}
+td.headerlinks a:link {
+}
+td.headerlinks a:hover {
+}
+td.headerlinks a:visited {
+}
+td.headererror{
+}
+/* CSS FOR THE FOOTER */
+table.tablefooter{
+width: 100%;
+color: #00ff40;
+border: 1px #00ff40 solid;
+font-weight: bold;
+}
+td.footer{
+}
+/*FORMS CSS*/
+/*submit for ie*/
+input, select{
+border: 1px #00ff40 solid;
+font-size: 10px;
+font-family: Arial, Helvetica;
+background-color:#000;
+color: #00ff40;
+}
+/*CSS FOR DESIGN PART*/
+/* playing now */
+.Insert1 {
+}
+/* playing next */
+.Insert2 {
+}
+/* queue */
+.Insert3 {
+}
+/* titles */
+.Insertheader {
+font-weight: bold;
+}
+/*CSS FOR FONT STYLE*/
+.author {
+font-weight: bold;
+}
+.title {
+}
+.categorie {
+}
+.user {
+}
+.rank {
+}
+.song {
+}
+.comment {
+}
+.newscomments {
+}
+.subject {
+}
+.warning {
+}
+/* CSS TO DESIGN BLOCK */
+/* small block LEFT column*/
+.modulesmall {
+border: 1px #00ff40 solid;
+}
+.moduletitlesmall {
+background-color: #00ff40;
+color: #000;
+}
+.modulecontentsmall {
+padding: 5px;
+}
+.modulecontentsmallcentered {
+text-align:center;
+padding: 5px;
+}
+.modulecontentsmalljustified {
+text-align:justify;
+padding: 5px;
+}
+/* small block right column*/
+.rmodulesmall {
+border: 1px #00ff40 solid;
+}
+.rmoduletitlesmall {
+background-color: #00ff40;
+color: #000;
+}
+.rmodulecontentsmall {
+padding: 5px;
+}
+.rmodulecontentsmallcentered {
+padding: 5px;
+text-align:center;
+}
+.rmodulecontentsmalljustify {
+padding: 5px;
+text-align:justify;
+}
+/* BIG block right column (3 or 4 columns layout)*/
+.moduleMedium {
+border: 1px #00ff40 solid;
+
+color: #00ff40;
+}
+.moduleMedium a {
+color: #00ff40;
+}
+.moduletitleMedium{
+background-color: #00ff40;
+color: #000;
+}
+.modulecontentMedium {
+padding: 5px;
+}
+/* BIG block right column (2 columns layout)*/
+.modulebig {
+border: 1px #00ff40 solid;
+color: #00ff40;
+}
+.modulebig a{
+color: #00ff40;
+}
+.moduletitlebig {
+background-color: #00ff40;
+color: #000;
+}
+.modulecontentbig {
+padding: 5px;
+}
+/* block for popup (magic window, requests etc..)*/
+.pmodulebig {
+border: 1px #00ff40 solid;
+color: #00ff40;
+}
+.pmoduletitlebig {
+background-color: #00ff40;
+color: #000;
+}
+.pmodulecontentbig {
+padding: 5px;
+}
+.pmodulecontentbigcentered {
+padding: 5px;
+text-align:center;
+}
+/* CSS NEWS */
+.newscontent {
+padding-bottom: 3px;
+border-bottom: 2px #00ff40 solid;
+}
+.newscontent img {
+}
+/*VARIOUS CSS FOR DESIGN*/
+.ok {
+}
+.expandcollapse{
+}
+/* CSS TO HIDE DIV DO NOT MODIFY */
+.cachediv {
+height: 1px;
+margin-top: -1px;
+overflow: hidden;
+position: absolute;
+visibility: hidden;
+}
+.cadre {
+}
+.collapse {
+}
+
+.approved {
+color: #00ff40;
+}
+.pending {
+color: #00ff40;
+}
+.refused {
+color: #00ff40;
+}
+/* CSS FOR THE DESIGN */
+/*the text at top left*/
+#textleft {
+text-align: center;
+padding-bottom: 5px;
+}
+/*the text at top middle*/
+#textmiddle {
+text-align: center;
+padding-bottom: 5px;
+}
+/*the text at top right*/
+#textright {
+text-align: center;
+padding-bottom: 5px;
+}
+/* CSS FOR DESIGN, do not modify if you don't know what you do */
+/* the screen */
+table.tablecontent{
+width:99%;
+}
+/* center column */
+td.centercontent{
+}
+/* left column */
+td.leftcontent{
+width: 200px;
+}
+/* right column */
+td.rightcontent{
+width: 200px;
+}
+/* 2nd right column (ads)*/
+td.rightpubcontent{
+}

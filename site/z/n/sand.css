@@ -1,0 +1,344 @@
+body { 
+font-family: arial,sans-serif;
+font-size:10px;
+background: #969696;
+}
+td {
+font-size:10px;
+}
+a:link {
+	color: #626262;
+	text-decoration:none;
+}
+a:hover {
+	color: #C27269;
+	text-decoration:underline;
+}
+input, select, option, textarea {
+font-family: arial,sans-serif; 
+}
+}
+form
+{
+}
+/* MAIN CSS */
+hr {border: none 0; 
+}
+.submit
+{
+clear: both;
+color: #fff;
+background: #626262;
+border: 1px #626262 outset;
+font-size:10px;
+}
+UL {
+color:#fff;
+padding:0px;
+margin:20px;
+}
+/* table design */
+table{
+}
+tr.off {
+}
+tr.on {
+background: #C27269;
+}
+/* CSS FOR THE HEADER */
+table.tableheader{
+width:100%;
+background-color: #626262;
+border: 1px solid #fff;
+text-align: center;
+padding: 3px;
+}
+td.headerlogo {
+//background-image: url(/z/n/skin/pouet/raist1.gif);
+width:444px;
+height:194px;
+}
+td.headerlinks {
+text-align:center;
+}
+td.headerlinks a:link {
+color:#fff;
+}
+td.headerlinks a:hover {
+color:#fff;
+}
+td.headerlinks a:visited {
+color:#fff;
+}
+td.headererror{
+text-align:left;
+color: #C27269;
+}
+/* CSS FOR THE FOOTER */
+table.tablefooter{
+width:100%;
+background-color: #626262;
+border: 1px solid #fff;
+text-align: center;
+padding: 3px;
+}
+td.footer{
+width:100%;
+text-align: center;
+}
+/*FORMS CSS*/
+/*submit for ie*/
+input{
+font-size:10px;
+}
+input[type="password"] {
+font-size:10px;
+}
+input[type="text"] {
+font-size:10px;
+}
+select {
+font-size:10px;
+}
+/*CSS FOR DESIGN PART*/
+/* playing now */
+.Insert1 {
+padding:3px;
+}
+/* playing next */
+.Insert2 {
+padding:3px;
+}
+/* queue */
+.Insert3 {
+padding:3px;
+}
+/* titles */
+.Insertheader {
+padding:3px;
+color:#626262;
+}
+/*CSS FOR FONT STYLE*/
+.author {
+color: #C27269;
+}
+.title {
+color: #fff;
+}
+.categorie {
+color: #fff;
+}
+.user {
+color: #C27269;
+}
+.rank {
+color: #fff;
+}
+.song {
+color: #fff;
+}
+.comment {
+color: #000
+text-align: justify;
+font-style: italic;
+}
+.newscomments {
+color: #000;
+text-align: right;
+}
+.subject {
+color: #fff;
+font-weight:bold;
+}
+.warning {
+color: #fff;
+font-weight: bold;
+}
+/* CSS TO DESIGN BLOCK */
+/* small block LEFT column*/
+.modulesmall {
+border: 1px solid #fff;
+}
+.moduletitlesmall {
+background-color: #6F6D61;
+border-bottom: 1px solid #fff;
+}
+.modulecontentsmall {
+background-color : #C5C2B3;
+text-align: left;
+padding:3px;
+}
+.modulecontentsmallcentered {
+background-color : #C5C2B3;
+padding:3px;
+text-align: center;
+}
+.modulecontentsmalljustified {
+background-color : #C5C2B3;
+padding:3px;
+text-align: justify;
+}
+.modulefootersmall {
+}
+/* small block right column*/
+.rmodulesmall {
+border: 1px solid #fff;
+}
+.rmoduletitlesmall {
+background-color : #6F6D61;
+border-bottom: 1px solid #fff;
+}
+.rmodulecontentsmall {
+background-color : #C5C2B3;
+text-align: left;
+padding:3px;
+}
+.rmodulecontentsmallcentered {
+background-color : #C5C2B3;
+text-align: center;
+padding:3px;
+}
+.rmodulecontentsmalljustify {
+background-color : #C5C2B3;
+text-align: justify;
+padding:3px;
+}
+.rmodulefootersmall {
+}
+/* BIG block right column (3 or 4 columns layout)*/
+.moduleMedium {
+border: 1px solid #fff;
+}
+.moduletitleMedium{
+background-color : #6F6D61;
+border-bottom: 1px solid #fff;
+}
+.modulecontentMedium {
+padding:3px;
+background-color : #C5C2B3;	
+}
+/* BIG block right column (2 columns layout)*/
+.modulebig {
+border: 1px solid #fff;
+}
+.moduletitlebig {
+background-color : #6F6D61;
+text-align: left;
+white-space: nowrap;
+border-bottom: 1px solid #fff;
+}
+.modulecontentbig {
+background-color : #C5C2B3;
+padding:3px;
+text-align: left;
+}
+/* block for popup (magic window, requests etc..)*/
+.pmodulebig {
+border: 1px solid #fff;
+}
+.pmoduletitlebig {
+background-color : #6F6D61;	
+text-align: left;
+white-space: nowrap;
+border-bottom: 1px solid #fff;
+}
+.pmodulecontentbig {
+background-color : #C5C2B3;
+padding:3px;
+text-align: left;
+}
+.pmodulecontentbigcentered {
+background-color : #C5C2B3;
+text-align: center;
+padding:3px;
+}
+.modulefooterbig {
+padding:3px;
+}
+/* CSS NEWS */
+.newscontent {
+text-align: justify;
+padding:3px;
+}
+.newscontent img {
+margin-bottom: 3px;
+margin-right: 3px;
+margin-top: 3px;
+}
+/*VARIOUS CSS FOR DESIGN*/
+.ok {
+color: #fff;
+font-weight: bold;
+}
+.expandcollapse{
+color: #C5C2B3;
+text-decoration: none;
+}
+/* CSS TO HIDE DIV DO NOT MODIFY */
+.cachediv {
+height: 1px;
+margin-top: -1px;
+overflow: hidden;
+position: absolute;
+visibility: hidden;
+}
+.cadre {
+border: 1px solid #fff;
+}
+.collapse {
+text-decoration: none;
+}
+.approved {
+font-weight:bold;
+}
+.pending {
+}
+.refused {
+font-style:italic;
+}
+/* CSS FOR THE DESIGN */
+/*the text at top left*/
+#textleft {
+text-align: left;
+color: #fff;
+}
+/*the text at top middle*/
+#textmiddle {
+text-align: center;
+color: #fff;
+}
+/*the text at top right*/
+#textright {
+text-align: right;
+color: #fff;
+}
+/* CSS FOR DESIGN, do not modify if you don't know what you do */
+/* the screen */
+table.tablecontent{
+width:99%;
+}
+/* center column */
+td.centercontent{
+vertical-align: top;
+padding-left: 3px;
+padding-right: 3px;
+}
+/* left column */
+td.leftcontent{
+width:200px;
+vertical-align: top;
+padding: 0px;
+}
+/* right column */
+td.rightcontent{
+width:200px;
+vertical-align: top;
+padding: 0px;
+}
+/* 2nd right column (ads)*/
+td.rightpubcontent{
+width:200px;
+vertical-align: top;
+text-align: center;
+padding: 0px;
+}

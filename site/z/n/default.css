@@ -1,0 +1,468 @@
+TD.BORDER{
+	FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif;
+	FONT-SIZE: 11px;
+	BORDER : 1px dotted #000;
+	PADDING : 5px;
+}
+BODY {
+	SCROLLBAR-BASE-COLOR: #336D95;
+	SCROLLBAR-ARROW-COLOR: #000000;
+	BACKGROUND: #666666;
+	background-image:url(/z/n/skin/default/bg.gif);
+	 background-repeat: repeat-x repeat-y;
+}
+SELECT {
+	FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif;
+	FONT-SIZE: 11px;
+	COLOR: #000000;
+	BACKGROUND-COLOR: #CFCFCF;
+}
+TEXTAREA {
+	FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif;
+	FONT-SIZE: 11px;
+	COLOR: #000000;
+	BACKGROUND-COLOR: #CFCFCF;
+}
+TABLE {
+	font-family: Verdana,Arial,Helvetica,sans-serif; 
+	font-weight: normal; 
+	font-size: 11px; 
+	color: #000000;
+}
+TD
+{
+	FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif;
+	FONT-SIZE: 11px;
+}
+a:link
+{
+color: #000;
+text-decoration:none;
+}
+a:hover
+{
+color: #990000;
+text-decoration:underline;
+}
+a:visited
+{
+color: #990000;
+text-decoration:none;
+}
+a:visited:hover
+{
+color: #990000;
+text-decoration:underline;
+}
+input, select, option, textarea
+{
+	FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif;
+	FONT-SIZE: 11px;
+}
+form
+{
+}
+hr {
+border-top: 1px solid #000; 
+border-bottom: 0px solid #000; 
+}
+.submit
+{
+clear: both;
+color: #fff;
+	background: #626262;
+	border: 1px #626262 outset;
+	FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif;
+	FONT-SIZE: 11px;
+}
+UL {
+color:#3366cc;
+padding:0px;
+margin:20px;
+}
+tr.off
+{
+}
+tr.on
+{
+background: #ddd;
+}
+table.tableheader
+{
+background-color: #FFFFFF;
+border: 1px solid #000;
+text-align: center;
+padding:0px;
+margin:0px;
+}
+td.headerlogo
+{
+background-image:url(/z/n/skin/default/RADIOLOGO.gif);
+background-repeat:no-repeat;
+width:600px;
+height:100px;
+cursor: pointer; 
+}
+td.headerlinks
+{
+text-align:center;
+}
+td.headerlinks a:link
+{
+color:#000;
+text-decoration:none;
+}
+td.headerlinks a:hover
+{
+color:#000;
+text-decoration:underline;
+}
+td.headerlinks a:visited
+{
+color:#000;
+text-decoration:none;
+}
+td.headerlinks a:visited:hover
+{
+color:#000;
+text-decoration:underline;
+}
+td.headererror
+{
+text-align:left;
+color: #990000;
+}
+/* CSS FOR THE FOOTER */
+table.tablefooter{
+width:100%;
+background-color: #fff;
+border: 1px solid #000;
+text-align: center;
+padding: 3px;
+}
+td.footer{
+width:100%;
+text-align: center;
+}
+/*FORMS CSS*/
+/*submit for ie*/
+input{
+	FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif;
+	FONT-SIZE: 11px;
+}
+input[type="password"] {
+	FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif;
+	FONT-SIZE: 11px;
+}
+input[type="text"] {
+	FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif;
+	FONT-SIZE: 11px;
+}
+/*CSS FOR DESIGN PART*/
+/* playing now */
+.Insert1 {
+padding:3px;
+}
+/* playing next */
+.Insert2 {
+padding:3px;
+}
+/* queue */
+.Insert3 {
+padding:3px;
+}
+/* titles */
+.Insertheader {
+border:1px solid #000;
+padding:3px;
+color:#fff;
+background:#626262;
+}
+.Insertheader a:link {
+color:#fff;
+text-decoration:underline;
+}
+.Insertheader a:hover {
+color:#fff;
+text-decoration:none;
+}
+.Insertheader a:visited {
+color:#fff;
+text-decoration:underline;
+}
+.Insertheader a:hover.visited{
+color:#fff;
+text-decoration:none;
+}
+/*CSS FOR FONT STYLE*/
+.author {
+color: #3366CC;
+}
+.title {
+color: #3366CC;
+}
+.categorie {
+color: #3366CC;
+}
+.user {
+color: #3366CC;
+}
+.rank {
+color: #3366CC;
+}
+.song {
+color: #3366CC;
+}
+.comment {
+color: #000;
+text-align: justify;
+font-style: italic;
+}
+.newscomments {
+color: #000;
+text-align: right;
+}
+.subject {
+color: #000;
+font-weight:bold;
+}
+.warning {
+color: #990000;
+font-weight: bold;
+}
+/* CSS TO DESIGN BLOCK */
+/* small block LEFT column*/
+
+.modulesmall {
+border: 1px solid #000;
+}
+.moduletitlesmall {
+background-image:url(/z/n/skin/default/smallb.gif);
+background-repeat:no-repeat;
+border-bottom: 1px solid #000;
+height:16px;
+}
+.modulecontentsmall {
+background-image:url(/z/n/skin/default/bgcadre.jpg);
+background-repeat:no-repeat;
+background-color : #FFFFFF;
+text-align: left;
+padding:3px;
+}
+.modulecontentsmallcentered {
+background-image:url(/z/n/skin/default/bgcadre.jpg);
+background-repeat:no-repeat;
+background-color : #FFFFFF;
+text-align: center;
+padding:3px;
+}
+.modulecontentsmalljustified {
+background-image:url(/z/n/skin/default/bgcadre.jpg);
+background-repeat:no-repeat;
+background-color : #FFFFFF;
+padding:3px;
+text-align: justify;
+}
+.modulefootersmall {
+}
+
+/* small block right column*/
+.rmodulesmall {
+border: 1px solid #000;
+}
+.rmoduletitlesmall {
+height:16px;
+background-image:url(/z/n/skin/default/smallb.gif);
+background-repeat:no-repeat;
+border-bottom: 1px solid #000;
+}
+.rmodulecontentsmall {
+background-image:url(/z/n/skin/default/bgcadre.jpg);
+background-repeat:no-repeat;
+background-color : #FFF;
+text-align: left;
+padding:3px;
+}
+.rmodulecontentsmallcentered {
+background-image:url(/z/n/skin/default/bgcadre.jpg);
+background-repeat:no-repeat;
+background-color : #FFF;
+text-align: center;
+padding:3px;
+}
+.rmodulecontentsmalljustify {
+background-image:url(/z/n/skin/default/bgcadre.jpg);
+background-repeat:no-repeat;
+background-color : #FFF;
+text-align: justify;
+padding:3px;
+}
+.rmodulefootersmall {
+}
+
+/* BIG block right column (3 or 4 columns layout)*/
+
+.moduleMedium {
+border: 1px solid #000;
+}
+.moduletitleMedium{
+height:16px;
+background-image:url(/z/n/skin/default/bigb.gif);
+background-repeat:repeat-x;
+border-bottom: 1px solid #000;
+}
+.modulecontentMedium {
+background-image:url(/z/n/skin/default/bgcadre2.jpg);
+background-repeat:repeat-x;
+padding:3px;
+background-color : #FFF;	
+}
+/* BIG block right column (2 columns layout)*/
+.modulebig {
+border: 1px solid #000;
+	FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif;
+	FONT-SIZE: 11px;
+}
+.moduletitlebig {
+height:16px;
+background-image:url(/z/n/skin/default/bigb.gif);
+background-repeat:repeat-x;
+text-align: left;
+white-space: nowrap;
+border-bottom: 1px solid #000;
+}
+.modulecontentbig {
+background-image:url(/z/n/skin/default/bgcadre2.jpg);
+background-repeat:repeat-x;
+background-color : #FFF;
+padding:3px;
+text-align: left;
+}
+/* block for popup (magic window, requests etc..)*/
+.pmodulebig {
+border: 1px solid #000;
+}
+.pmoduletitlebig {
+background-image:url(/z/n/skin/default/bigb.gif);
+background-repeat:repeat-x;	
+text-align: left;
+white-space: nowrap;
+border-bottom: 1px solid #000;
+}
+.pmodulecontentbig {
+background-image:url(/z/n/skin/default/bgcadre.jpg);
+background-repeat:repeat-x;
+background-color : #FFF;
+padding:3px;
+text-align: left;
+}
+.pmodulecontentbigcentered {
+background-image:url(/z/n/skin/default/bgcadre.jpg);
+background-repeat:repeat-x;
+background-color : #FFF;
+text-align: center;
+padding:3px;
+}
+.modulefooterbig {
+padding:3px;
+}
+/* CSS NEWS */
+.newscontent {
+text-align: justify;
+padding:3px;
+}
+.newscontent img {
+margin-bottom: 3px;
+margin-right: 3px;
+margin-top: 3px;
+}
+/*VARIOUS CSS FOR DESIGN*/
+.ok {
+color: #009933;
+font-weight: bold;
+}
+.expandcollapse{
+color: #000;
+text-decoration: none;
+}
+/* CSS TO HIDE DIV DO NOT MODIFY */
+.cachediv {
+height: 1px;
+margin-top: -1px;
+overflow: hidden;
+position: absolute;
+visibility: hidden;
+}
+.cadre {
+border: 1px solid #000;
+}
+.collapse {
+text-decoration: none;
+}
+.approved {
+background:#009933;
+color:#fff;
+padding : 1px;
+}
+.pending {
+background:#3366CC;
+color:#fff;
+padding : 1px;
+}
+.refused {
+background:#990000;
+color:#fff;
+padding : 1px;
+}
+/* CSS FOR THE DESIGN */
+/*the text at top left*/
+#textleft {
+text-align: left;
+color: #fff;
+}
+/*the text at top middle*/
+#textmiddle {
+text-align: center;
+color: #fff;
+}
+/*the text at top right*/
+#textright {
+text-align: right;
+color: #fff;
+}
+/* CSS FOR DESIGN, do not modify if you don't know what you do */
+/* the screen */
+table.tablecontent{
+width:99%;
+border-spacing: 0px; 
+border-collapse: collapse;
+margin:5px;
+}
+/* center column */
+td.centercontent{
+vertical-align: top;
+padding-left: 10px;
+padding-right: 10px;
+}
+/* left column */
+td.leftcontent{
+width:200px;
+vertical-align: top;
+padding: 0px;
+margin:0px;
+}
+/* right column */
+td.rightcontent{
+width:200px;
+vertical-align: top;
+padding: 0px;
+margin:0px;
+}
+/* 2nd right column (ads)*/
+td.rightpubcontent{
+width:200px;
+vertical-align: top;
+text-align: center;
+padding: 0px;
+margin:0px;
+}

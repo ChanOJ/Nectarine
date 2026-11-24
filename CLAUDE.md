@@ -16,7 +16,11 @@ Context of the whole id3/id3x family: `~/Code/id3x/CLAUDE.md`.
 - Never publish engine code (`.asp`, `.inc`, DLLs), the upload applets (`.jar`, `.cab`), the
   stream server address or the FTP credentials hard-coded in admin blocks, nor sensitive columns
   (password, logins, IPs, host names, departments, birth years, e-mail domains, donations).
-- `site/` is generated and git-ignored; `private/` (notes, Wayback captures) is git-ignored.
+- `site/` is generated on the Mac and **committed**; `private/` (notes, Wayback captures) is git-ignored.
+- Process: rebuild locally (`scripts/publish.sh`: build + checks, no deploy), commit `site/` in the
+  same PR as the script change, merge = CI deploys (`.github/workflows/deploy.yml`). Never deploy by
+  hand, never `git add -A`; a leak in git history is permanent, so `verify_build.py` and
+  `check_excludes.py` must pass before any commit of `site/`.
 
 ## Layout
 
