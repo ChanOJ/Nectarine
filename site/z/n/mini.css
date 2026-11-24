@@ -1,0 +1,295 @@
+/* MAIN CSS */
+
+body {
+font-family: Arial, Helvetica;
+background-color: #ccc;
+}
+hr {
+}
+/* links */
+a {
+text-decoration: underline;
+color: #005;
+}
+a:link {
+}
+a:visited {
+}
+a:hover {
+color: #f00;
+}
+/* linked picture */
+a img {
+}
+/* table design */
+table{
+background-color: #888;
+
+padding: 5px;
+width: 100%;
+}
+td {
+font-size: 0.7em;
+vertical-align: top;
+padding: 2px;
+}
+tr.off {
+}
+tr.on {
+}
+/* CSS FOR THE HEADER */
+table.tableheader{
+background-color: #ffa;
+border: 1px black solid;
+}
+td.headerlogo {
+}
+td.headerlinks {
+font-weight: bold;
+}
+td.headerlinks a:link {
+}
+td.headerlinks a:hover {
+}
+td.headerlinks a:visited {
+}
+td.headererror{
+}
+/* CSS FOR THE FOOTER */
+
+table.tablefooter{
+width: 100%;
+background-color: #000;
+color: #fa0;
+}
+td.footer{
+}
+
+/*FORMS CSS*/
+/*submit for ie*/
+input, select{
+border: 1px black solid;
+font-size: 10px;
+font-family: Arial, Helvetica;
+}
+
+/*CSS FOR DESIGN PART*/
+
+/* playing now */
+.Insert1 {
+}
+/* playing next */
+.Insert2 {
+}
+/* queue */
+.Insert3 {
+}
+/* titles */
+.Insertheader {
+font-weight: bold;
+}
+
+/*CSS FOR FONT STYLE*/
+.author {
+font-weight: bold;
+}
+.title {
+}
+.categorie {
+}
+.user {
+}
+.rank {
+}
+.song {
+}
+.comment {
+}
+.newscomments {
+}
+.subject {
+}
+.warning {
+}
+
+/* CSS TO DESIGN BLOCK */
+/* small block LEFT column*/
+.modulesmall {
+border: 1px black solid;
+background-color: #fa0;
+}
+.moduletitlesmall {
+background-color: #000;
+color: #fff;
+}
+.modulecontentsmall {
+padding: 5px;
+border-bottom: 3px black solid;
+}
+.modulecontentsmallcentered {
+text-align:center;
+border-bottom: 3px black solid;
+}
+.modulecontentsmalljustified {
+text-align:justify;
+border-bottom: 3px black solid;
+}
+
+/* small block right column*/
+.rmodulesmall {
+border: 1px black solid;
+background-color: #fa0;
+}
+.rmoduletitlesmall {
+background-color: #000;
+color: #fff;
+}
+.rmodulecontentsmall {
+padding: 5px;
+border-bottom: 3px black solid;
+}
+.rmodulecontentsmallcentered {
+padding: 5px;
+text-align:center;
+border-bottom: 3px black solid;
+}
+.rmodulecontentsmalljustify {
+padding: 5px;
+text-align:justify;
+border-bottom: 3px black solid;
+}
+/* BIG block right column (3 or 4 columns layout)*/
+.moduleMedium {
+border: 1px black solid;
+background-color: #000;
+color: #fa0;
+}
+.moduleMedium a {
+color: #ffa;
+}
+.moduletitleMedium{
+background-color: #fa0;
+color: #000;
+font-weight: bold;
+}
+.modulecontentMedium {
+padding: 5px;
+border-bottom: 3px black solid;
+}
+/* BIG block right column (2 columns layout)*/
+.modulebig {
+border: 1px black solid;
+background-color: #000;
+color: #fa0;
+}
+.modulebig a{
+color: #ffa;
+}
+.moduletitlebig {
+background-color: #fa0;
+color: #000;
+font-weight: bold;
+}
+.modulecontentbig {
+padding: 5px;
+}
+/* block for popup (magic window, requests etc..)*/
+.pmodulebig {
+border: 1px black solid;
+background-color: #fa0;
+}
+.pmoduletitlebig {
+background-color: #000;
+color: #fff;
+}
+.pmodulecontentbig {
+padding: 5px;
+border-bottom: 3px black solid;
+}
+.pmodulecontentbigcentered {
+padding: 5px;
+}
+/* CSS NEWS */
+.newscontent {
+padding-bottom: 3px;
+border-bottom: 1px #fa0 solid;
+}
+.newscontent img {
+}
+/*VARIOUS CSS FOR DESIGN*/
+.ok {
+}
+.expandcollapse{
+}
+/* CSS TO HIDE DIV DO NOT MODIFY */
+.cachediv {
+height: 1px;
+margin-top: -1px;
+overflow: hidden;
+position: absolute;
+visibility: hidden;
+}
+.cadre {
+}
+.collapse {
+}
+/* CSS FOR UPLOAD APPLET */
+.uploadpanel {
+color: #000000;
+}
+.uploadbarborder{
+color: #fa0;
+}
+.uploadbarprogress {
+color: #fa0;
+}
+.uploadbarsuccess{
+color: #fa0;
+}
+.uploabarcrash {
+color: #fa0;
+}
+.approved {
+color: #fa0;
+}
+.pending {
+}
+.refused {
+color: #990000;
+}
+/* CSS FOR THE DESIGN */
+
+/*the text at top left*/
+#textleft {
+text-align: center;
+padding-bottom: 5px;
+}
+/*the text at top middle*/
+#textmiddle {
+text-align: center;
+padding-bottom: 5px;
+}
+/*the text at top right*/
+#textright {
+text-align: center;
+padding-bottom: 5px;
+}
+/* CSS FOR DESIGN, do not modify if you don't know what you do */
+/* the screen */
+table.tablecontent{
+width:99%;
+}
+/* center column */
+td.centercontent{
+}
+/* left column */
+td.leftcontent{
+width: 200px;
+}
+/* right column */
+td.rightcontent{
+width: 200px;
+}
+/* 2nd right column (ads)*/
+td.rightpubcontent{
+}

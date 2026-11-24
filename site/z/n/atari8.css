@@ -1,0 +1,765 @@
+/* MAIN CSS */
+body 
+{
+  background-color: #014E9D;
+  color: #61AEFD;
+
+  font-size: 8px;
+  font-family: atari classic chunky;
+  
+  border-color: black;
+  border-width: 10px;
+  border-style: solid;
+  
+  scrollbar-base-color: #014E9D;
+  scrollbar-3d-light-color:#014E9D;
+  scrollbar-arrow-color:#014E9D;
+  scrollbar-darkshadow-color:#014E9D;
+  scrollbar-face-color:#61AEFD;
+  scrollbar-highlight-color:#014E9D;
+  scrollbar-shadow-color:#014E9D;
+  scrollbar-track-color:#014E9D;
+  
+  text-align: center;   
+  
+  margin: 0px;
+  padding: 8px;
+  
+}
+
+td
+{
+  font-size: 8px;
+  font-family: atari classic chunky;
+  
+  line-height: 10px;
+}
+
+
+
+hr
+{
+  border-color: #61AEFD;
+  border-style: solid;
+  border-width: 2px;
+  
+  height: 2px;
+
+  width: 100%;
+}
+
+UL
+{
+  list-style-image: url(/z/n/skin/atari8/atari_8bit_bullet.gif);
+  padding:0px;
+  margin: 15px;
+}
+
+img
+{
+}
+
+/* links */
+a
+{
+  font-weight: normal;
+  text-decoration: none;
+  color: #61AEFD;
+  
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #61AEFD;
+}
+
+.InsertHeader a
+{
+  color: #014E9D; 
+  border-bottom-color: #014E9D;
+}
+
+a:link
+{
+}
+
+a:visited
+{
+}
+
+a:active
+{
+}
+
+a:focus
+{
+}
+
+a:hover
+{
+  background-color: #61AEFD;
+  color: #014E9D;
+}
+            
+.InsertHeader a:hover
+{
+  color: #61AEFD;
+  background-color: #014E9D; 
+}
+
+            
+/* linked picture */
+a img
+{
+  border-bottom-width: 0px;
+  border-bottom-style: solid;
+  border-bottom-color: #61AEFD;
+}
+
+/* table design */
+table
+{
+}
+
+tr.off
+{
+}
+
+tr.on
+{
+}
+
+/* CSS FOR THE HEADER */
+table.tableheader
+{
+  border-color: #61AEFD;
+  border-style: solid;
+  border-width: 2px;
+
+  padding: 3px;
+  
+  margin-left: 4px;
+  margin-right: 4px;
+
+  width: 99.1%;  
+  
+}
+
+td.headerlogo
+{
+  background-image: url(/z/n/skin/atari8/atari_8bit_nectarine_logo.gif);
+  background-repeat: no-repeat;
+  
+  background-position: center center;
+  
+  width:600px;
+  height:100px;
+  
+  cursor: pointer;
+  
+}
+
+td.headerlinks
+{
+  text-align:center;
+  color: #014E9D;
+}
+
+td.headerlinks a:link
+{
+}
+
+td.headerlinks a:hover
+{
+}
+
+td.headerlinks a:visited
+{
+}
+
+td.headererror{
+text-align:left;
+
+
+}
+
+/* CSS FOR THE FOOTER */
+table.tablefooter
+{
+  margin-top: 8px;
+  margin-bottom: 20px;
+
+  margin-left: 4px;
+  margin-right: 4px;
+
+  width: 99%;  
+  
+  border-style: solid;
+  border-color: #61AEFD;
+  border-width: 2px; 
+  
+}
+
+td.footer
+{
+  text-align: center;
+  padding: 8px;
+}
+
+/*FORMS CSS*/
+/*submit for ie*/
+input
+{
+  border-color: #61AEFD;
+  border-style: solid;
+  border-width: 2px;
+  
+  padding: 0px;
+  margin-top: 3px;
+  
+  background-color: #61AEFD;
+  color: #014E9D; 
+
+  font-size: 8px;
+  font-family: atari classic chunky;
+  
+  height: 13px;
+  
+}
+
+textarea
+{
+  border-color: #61AEFD;
+  border-style: solid;
+  border-width: 2px;
+  
+  padding-top: 0px;
+  margin-top: 3px;
+  
+  background-color: #61AEFD;
+  color: #014E9D; 
+
+  font-size: 8px;
+  font-family: atari classic chunky;
+  
+  width: 90%;
+  height: 100px;
+}
+
+.submit
+{
+  width: 185px;
+  height: 17px;
+  
+  background-color: #014E9D;
+  color: #61AEFD;
+}
+
+/*submit for firefox*/
+input[type="submit"]
+{
+  width: 185px;
+}
+
+input[type="password"]
+{
+  width: 160px;
+}
+
+input[type="checkbox"]
+{
+  border-width: 0px;
+}
+
+input[type="text"]
+{
+}
+
+select
+{
+  border-color: #61AEFD;
+  border-style: solid;
+  border-width: 2px;
+  width: 160px;
+  
+  padding: 0px;
+  margin: 0px;
+  
+  background-color: #61AEFD;
+  color: #014E9D; 
+
+  font-size: 8px;
+  font-family: atari classic chunky;
+  
+  height: 16px;
+}
+
+             
+/*CSS FOR DESIGN PART*/
+
+/* playing now */
+.Insert1
+{
+  border-color: #61AEFD;
+  border-style: solid;
+  border-width: 2px;
+  
+  padding: 3px;
+  margin: 3px;
+}
+
+/* playing next */
+.Insert2
+{
+  border-color: #61AEFD;
+  border-style: solid;
+  border-width: 2px;
+  
+  padding: 3px;
+  margin: 3px;
+}
+
+/* queue */
+.Insert3
+{
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+/* titles */
+.Insertheader
+{
+  background-color: #61AEFD;
+  color: #014E9D; 
+}
+
+/*CSS FOR FONT STYLE*/
+.author
+{
+
+
+}
+
+.title
+{
+
+
+}
+
+.categorie
+{
+
+
+}
+
+.user
+{    
+}
+
+.rank
+{
+
+
+}
+
+.song
+{
+
+
+}
+
+.comment
+{
+  text-align: center;
+}
+
+.newscomments
+{
+  text-align: right;
+}
+
+.verdanatext
+{
+  width: 420px;
+}
+
+.subject
+{
+}
+
+.warning
+{
+  text-transform: uppercase;
+}
+
+/* CSS TO DESIGN BLOCK */
+
+
+/* news formular */
+
+.module
+{
+  border-color: #61AEFD;
+  border-style: solid;
+  border-width: 2px;
+  padding: 3px;
+  margin: 3px;   
+}
+
+.moduletitle
+{
+  background-color: #61AEFD;
+  color: #014E9D;
+  
+  height: 10px;
+  
+}
+
+.newsheader
+{
+  border-top-color: #61AEFD;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-bottom-color: #61AEFD;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  padding: 3px;
+  margin: 3px;   
+  margin-top: 14px;
+  
+  text-align: center;
+}
+
+/* small block LEFT column*/
+.modulesmall
+{
+  border-color: #61AEFD;
+  border-style: solid;
+  border-width: 2px;
+  padding: 3px;
+  margin: 3px;   
+  
+  width: 203px;
+}
+
+.moduletitlesmall
+{
+  background-color: #61AEFD;
+  color: #014E9D;
+  
+  height: 10px;
+  
+}
+
+.modulecontentsmall
+{
+  text-align: left;
+  padding:3px;
+}
+
+.modulecontentsmallcentered
+{
+  padding:3px;
+  text-align: center;
+}
+
+.modulecontentsmalljustified
+{
+  padding:3px;
+  text-align: justify;
+}
+
+.modulefootersmall
+{
+}
+
+/* small block right column*/
+.rmodulesmall
+{
+  border-color: #61AEFD;
+  border-style: solid;
+  border-width: 2px;
+  padding: 3px;
+  margin: 3px;
+  width: 203px;
+}
+
+.rmoduletitlesmall
+{
+  background-color: #61AEFD;
+  color: #014E9D;
+  
+  height: 10px;
+}
+
+.rmodulecontentsmall
+{
+  padding:3px;
+  text-align: left;
+}
+
+.rmodulecontentsmallcentered
+{
+  padding:3px;
+  text-align: center;
+}
+
+.rmodulecontentsmalljustify
+{
+  padding:3px;
+  text-align: justify;
+}
+
+.rmodulefootersmall
+{
+}
+
+/* BIG block right column (3 or 4 columns layout)*/
+
+.moduleMedium
+{
+  border-color: #61AEFD;
+  border-style: solid;
+  border-width: 2px;
+  padding: 3px;
+  margin: 3px;
+}
+
+.moduletitleMedium
+{
+  background-color: #61AEFD;
+  color: #014E9D;
+
+  height: 10px;
+
+  margin-bottom: 12px;
+}
+
+.modulecontentMedium
+{
+}
+
+/* BIG block right column (2 columns layout)*/
+.modulebig
+{
+  border-color: #61AEFD;
+  border-style: solid;
+  border-width: 2px;
+  padding: 3px;
+  margin: 3px;
+}
+
+.moduletitlebig
+{
+  background-color: #61AEFD;
+  color: #014E9D;
+
+  margin-bottom: 12px;
+  
+  height: 10px;
+}
+
+.modulecontentbig
+{
+  padding-left: 16px;
+  padding-right: 16px;
+  text-align: left;
+  width: 97%;
+}           
+
+/* block for popup (magic window, requests etc..)*/
+.pmodulebig
+{
+  border-color: #61AEFD;
+  border-style: solid;
+  border-width: 2px;
+
+  padding: 3px;
+
+  line-height: 12px;
+  
+  width: 99%;
+  height: 100%;
+}
+
+.pmoduletitlebig
+{
+  background-color: #61AEFD;
+  color: #014E9D;
+
+  margin-bottom: 12px;
+  
+  text-align: center;
+}
+
+.pmoduletitlebig img
+{                   
+  height: 1px;
+  width: 1px;
+}
+
+.pmodulecontentbig
+{
+}
+
+.pmodulecontentbigcentered
+{
+  text-align: center;
+  position: relative;
+}
+
+.pmodulecontentbigcentered table
+{
+  width: 100%;
+}
+
+.modulefooterbig
+{
+  padding:3px;
+}
+
+/* CSS NEWS */
+.newscontent
+{
+  text-align: justify;
+  
+  padding-top: 12px;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-top: 3px;
+
+  padding-bottom: 12px;
+  margin-bottom: -12px;
+  
+  border-bottom-width: 2px;
+  border-bottom-color: #61AEFD;
+  border-bottom-style: solid;
+
+  border-top-width: 2px;
+  border-top-color: #61AEFD;
+  border-top-style: solid;
+}
+
+.newscontent img
+{
+  margin-bottom: 3px;
+  margin-right: 3px;
+  margin-top: 3px;
+}
+
+/*VARIOUS CSS FOR DESIGN*/
+.ok
+{
+}
+
+.expandcollapse
+{
+  text-decoration: none;
+}
+
+/* CSS TO HIDE DIV DO NOT MODIFY */
+.cachediv
+{
+height: 1px;
+margin-top: -1px;
+overflow: hidden;
+position: absolute;
+visibility: hidden;
+}
+
+.cadre
+{
+
+}
+
+.collapse
+{    
+  background-image: url(/z/n/skin/atari8/atari_8bit_collapsegadget.gif);
+  height: 8px;
+  width: 16px;
+  overflow: hidden;
+  
+}
+
+
+/* CSS FOR UPLOAD APPLET */
+
+.approved
+{
+
+}
+
+.pending
+{
+
+}
+
+.refused
+{
+
+}
+
+/* CSS FOR THE DESIGN */
+/*the text at top left*/
+#textleft
+{
+text-align: left;
+
+
+}
+
+/*the text at top middle*/
+#textmiddle
+{
+text-align: center;
+
+
+}
+
+/*the text at top right*/
+#textright
+{
+text-align: right;
+
+
+}
+
+/* CSS FOR DESIGN, do not modify if you don't know what you do */
+/* the screen */
+table.tablecontent
+{
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+/* center column */
+td.centercontent
+{
+  vertical-align: top;
+}
+
+/* left column */
+td.leftcontent
+{
+  width:200px;
+  vertical-align: top;
+  padding: 0px;
+}
+
+/* right column */
+td.rightcontent
+{
+  width:200px;
+  vertical-align: top;
+  padding: 0px;
+}
+
+/* 2nd right column (ads)*/
+td.rightpubcontent
+{
+  width:200px;
+  vertical-align: top;
+  text-align: center;
+  padding: 0px;      
+}

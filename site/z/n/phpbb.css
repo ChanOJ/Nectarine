@@ -1,0 +1,452 @@
+/* MAIN CSS */
+
+body {
+background-image: url(/z/n/pic/bg.gif);
+}
+hr {border: none 0; 
+border-top: 1px dashed #000000;
+border-bottom: 1px dashed #cccccc;
+width: 100%;
+height: 2px;
+margin: 10px auto 0 0;
+text-align: left;
+}
+UL {
+list-style-image: url(/z/n/pic/design/nav_sub_dot_active.gif);
+padding:0px;
+margin:20px;
+}
+/* links */
+a:link {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 11px;
+color: #000000;
+}
+a:visited {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 11px;
+color: #990000;
+}
+a:hover {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 11px;
+color: #CC0000;
+}
+/* linked picture */
+a img {
+border: 0px;
+}
+/* table design */
+table{
+}
+td {
+font:11px verdana;
+}
+tr.off {
+}
+tr.on {
+background: #cccccc;
+}
+/* CSS FOR THE HEADER */
+table.tableheader{
+background-color: #006699;
+border: 1px solid Black;
+padding: 3px;
+font:11px verdana;
+}
+td.headerlogo {
+background-image: url(/z/n/pic/logo/kodoichi2.jpg);
+background-repeat: no-repeat;
+width:600px;
+height:100px;
+font:11px verdana;
+}
+td.headerlinks {
+text-align:center;
+}
+td.headerlinks a:link {
+font:11px verdana;
+color:white;
+}
+td.headerlinks a:hover {
+font:11px verdana;
+color:black;
+}
+td.headerlinks a:visited {
+font:11px verdana;
+color:white;
+}
+td.headererror{
+text-align:left;
+font:11px verdana;
+color: #ff0000;
+font-weight: bold;
+}
+/* CSS FOR THE FOOTER */
+
+table.tablefooter{
+background-color: #EEEEEE;
+width:100%;
+border: 1px solid #000000;
+text-align: center;
+padding: 3px;
+}
+td.footer{
+width:100%;
+font:11px verdana;
+text-align: center;
+}
+
+/*FORMS CSS*/
+/*submit for ie*/
+input{
+}
+.submit{
+border:1px solid black;
+background : #fff url(/z/n/pic/degrade_bleu.png) repeat-x 0 100%;
+width: 160px;
+font:11px verdana;
+}
+/*submit for firefox*/
+input[type="submit"] {
+border:1px solid black;
+background : #fff url(/z/n/pic/degrade_bleu.png) repeat-x 0 100%;
+width: 160px;
+font:11px verdana;
+}
+input[type="password"] {
+border:1px solid black;	
+width: 160px;
+font:11px verdana;
+}
+input[type="text"] {
+border:1px solid black;
+font:11px verdana;
+}
+select {
+border:1px solid black;
+font:11px verdana;
+}
+/*CSS FOR DESIGN PART*/
+
+/* playing now */
+.Insert1 {
+background-color: #eeeeee;
+padding:3px;
+font:11px verdana;
+border-bottom: 1px dashed #000;
+}
+/* playing next */
+.Insert2 {
+background-color: #eeeeee;
+text-align: left;
+padding:3px;
+font:11px verdana;
+border-bottom: 1px dashed #000;
+}
+/* queue */
+.Insert3 {
+background-color: #eeeeee;
+text-align: left;
+padding:3px;
+font:11px verdana;
+}
+/* titles */
+.Insertheader {
+background-color: #EEEEEE;
+padding:3px;
+font:11px verdana ;
+color:#990000;
+font-weight: bold;
+}
+
+/*CSS FOR FONT STYLE*/
+.author {
+color: #000000;
+font:11px verdana;
+}
+.title {
+color: #000000;
+font:11px verdana;
+}
+.categorie {
+color: #990000;
+font:11px verdana;
+}
+.user {
+color: #990000;
+font:11px verdana;
+}
+.rank {
+color: #990000;
+font:11px verdana;
+}
+.song {
+color: #000000;
+font:11px verdana;
+}
+.comment {
+color: #000
+text-align: justify;
+font-style: italic;
+font:11px verdana;
+}
+.newscomments {
+color: #000;
+text-align: right;
+font:11px verdana;
+}
+.subject {
+color: #B3896B;
+font:11px verdana;
+}
+.warning {
+color: #990000;
+font-weight: bold;
+font:11px verdana;
+}
+
+/* CSS TO DESIGN BLOCK */
+/* small block LEFT column*/
+.modulesmall {
+}
+.moduletitlesmall {
+height:16px;
+background-image: url(/z/n/pic/table_bg.gif);
+border: 1px solid #000;
+font:11px verdana;
+}
+.modulecontentsmall {
+background-color: #E4EAF2;
+text-align: left;
+padding:3px;
+border-left: 1px solid #000;
+border-right: 1px solid #000;
+border-bottom: 1px solid #000;
+font:11px verdana;
+}
+.modulecontentsmallcentered {
+padding:3px;
+background-color: #E4EAF2;
+text-align: center;
+border-left: 1px solid #000;
+border-right: 1px solid #000;
+border-bottom: 1px solid #000;
+font:11px verdana;
+}
+.modulecontentsmalljustified {
+padding:3px;
+background-color: #E4EAF2;
+text-align: justify;
+border-left: 1px solid #000;
+border-right: 1px solid #000;
+border-bottom: 1px solid #000;
+font:11px verdana;
+}
+.modulefootersmall {
+}
+/* small block right column*/
+.rmodulesmall {
+}
+.rmoduletitlesmall {
+height:16px;
+background-image: url(/z/n/pic/table_bg.gif);
+border: 1px solid #000;
+font:11px verdana;
+}
+.rmodulecontentsmall {
+padding:3px;
+background-color: #E4EAF2;
+text-align: left;
+border-left: 1px solid #000;
+border-right: 1px solid #000;
+border-bottom: 1px solid #000;
+font:11px verdana;
+}
+.rmodulecontentsmallcentered {
+padding:3px;
+background-color: #E4EAF2;
+text-align: center;
+border-left: 1px solid #000;
+border-right: 1px solid #000;
+border-bottom: 1px solid #000;
+font:11px verdana;
+}
+.rmodulecontentsmalljustify {
+padding:3px;
+background-color: #E4EAF2;
+text-align: justify;
+border-left: 1px solid #000;
+border-right: 1px solid #000;
+border-bottom: 1px solid #000;
+font:11px verdana;
+}
+.rmodulefootersmall {
+}
+/* BIG block right column (3 or 4 columns layout)*/
+.moduleMedium {
+border: 1px solid #000000;
+font:11px verdana;
+}
+.moduletitleMedium{
+background-image: url(/z/n/pic/table_bg_image.gif);
+height:16px;
+text-align: left;
+white-space: nowrap;
+border-bottom: 1px solid #000;
+font:11px verdana;
+}
+.modulecontentMedium {
+padding:3px;
+background-color: #EEEEEE;	
+font:11px verdana;
+}
+/* BIG block right column (2 columns layout)*/
+.modulebig {
+border: 1px solid #000;
+font:11px verdana;
+}
+.moduletitlebig {
+background-image: url(/z/n/pic/table_bg_image.gif);
+height:16px;
+text-align: left;
+white-space: nowrap;
+border-bottom: 1px solid #000;
+font:11px verdana;
+}
+.modulecontentbig {
+padding:3px;
+background-color: #EEEEEE;	
+font:11px verdana;
+text-align: left;
+}
+/* block for popup (magic window, requests etc..)*/
+.pmodulebig {
+border: 1px solid #000;
+font:11px verdana;
+}
+.pmoduletitlebig {
+background-image: url(/z/n/pic/table_bg_image.gif);
+height:16px;
+text-align: left;
+white-space: nowrap;
+border-bottom: 1px solid #000;
+font:11px verdana;
+}
+.pmodulecontentbig {
+padding:3px;
+background-color: #EEEEEE;	
+font:11px verdana;
+}
+.pmodulecontentbigcentered {
+text-align: center;
+background-color: #EEEEEE;
+font:11px verdana;
+}
+.modulefooterbig {
+border-top: 1px solid #ffffff;
+padding:3px;
+font:11px verdana;
+}
+/* CSS NEWS */
+.newscontent {
+text-align: justify;
+background-color: #EEEEEE;
+border-bottom: 1px dashed #000;
+padding:3px;
+font:11px verdana;
+}
+.newscontent img {
+margin-bottom: 3px;
+margin-right: 3px;
+margin-top: 3px;
+}
+/*VARIOUS CSS FOR DESIGN*/
+.ok {
+color: #339933;
+font-weight: bold;
+font:11px verdana;
+}
+.expandcollapse{
+color: #000;
+font:11px verdana;
+text-decoration: none;
+}
+
+/* CSS TO HIDE DIV DO NOT MODIFY */
+.cachediv {
+height: 1px;
+margin-top: -1px;
+overflow: hidden;
+position: absolute;
+visibility: hidden;
+}
+.cadre {
+border: 1px solid #000000;
+}
+.collapse {
+text-decoration: none;
+}
+
+.approved {
+color: #009900;
+}
+.pending {
+color: #996600;
+}
+.refused {
+color: #990000;
+}
+/* CSS FOR THE DESIGN */
+
+/*the text at top left*/
+#textleft {
+text-align: left;
+color: Black;
+font:11px verdana;
+}
+/*the text at top middle*/
+#textmiddle {
+text-align: center;
+color: Black;
+font:11px verdana;
+}
+/*the text at top right*/
+#textright {
+text-align: right;
+color: Black;
+font:11px verdana;
+}
+/* CSS FOR DESIGN, do not modify if you don't know what you do */
+/* the screen */
+table.tablecontent{
+width:99%;
+}
+/* center column */
+td.centercontent{
+vertical-align: top;
+padding-left: 3px;
+padding-right: 3px;
+font:11px verdana;
+}
+/* left column */
+td.leftcontent{
+width:200px;
+vertical-align: top;
+padding: 0px;
+font:11px verdana;
+}
+/* right column */
+td.rightcontent{
+width:200px;
+vertical-align: top;
+padding: 0px;
+font:11px verdana;
+}
+/* 2nd right column (ads)*/
+td.rightpubcontent{
+width:200px;
+vertical-align: top;
+text-align: center;
+padding: 0px;
+font:11px verdana;

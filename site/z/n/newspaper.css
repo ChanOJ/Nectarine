@@ -1,0 +1,345 @@
+/* MAIN CSS */
+body {
+background-image: url(/z/n/skin/newspaper/newspaper3.jpg);
+font-family: Last Words;
+font-size:10px;
+}
+hr {border: none 0; 
+border-top: 1px dashed #000000;
+border-bottom: 1px dashed #cccccc;
+width: 100%;
+height: 2px;
+margin: 10px auto 0 0;
+text-align: left;
+}
+UL {
+list-style: none;
+padding:0px;
+margin:20px;
+}
+/* links */
+a:link {
+color: #000000;
+}
+a:visited {
+color: #990000;
+}
+a:hover {
+color: #CC0000;
+}
+/* linked picture */
+a img {
+border: 0px;
+}
+/* table design */
+table{
+}
+td {
+
+}
+tr.off {
+}
+tr.on {
+}
+/* CSS FOR THE HEADER */
+table.tableheader{
+border: 2px solid Black;
+padding: 3px;
+}
+td.headerlogo {
+background-image: url(/z/n/skin/newspaper/logo.gif);
+background-repeat: no-repeat;
+width:600px;
+height:100px;
+}
+td.headerlinks {
+text-align:center;
+}
+td.headerlinks a:link {
+}
+td.headerlinks a:hover {
+}
+td.headerlinks a:visited {
+}
+td.headererror{
+text-align:left;
+font-weight: bold;
+}
+/* CSS FOR THE FOOTER */
+table.tablefooter{
+width:100%;
+border: 2px solid #000000;
+text-align: center;
+padding: 3px;
+}
+td.footer{
+width:100%;
+text-align: center;
+}
+/*FORMS CSS*/
+/*submit for ie*/
+input{
+}
+.submit{
+border:1px dashed #000;
+background-image: url(/z/n/skin/newspaper/newspaper3.jpg);
+width: 160px;
+}
+/*submit for firefox*/
+input[type="submit"] {
+border:1px dashed #000;
+background-image: url(/z/n/skin/newspaper/newspaper3.jpg);
+width: 160px;
+}
+input[type="password"] {
+border:1px dashed #000;
+background-image: url(/z/n/skin/newspaper/newspaper3.jpg);
+width: 160px;
+}
+input[type="text"] {
+border:1px dashed #000;
+background-image: url(/z/n/skin/newspaper/newspaper3.jpg);
+width: 160px;
+}
+select {
+border:1px dashed #000;
+background-image: url(/z/n/skin/newspaper/newspaper3.jpg);
+width: 160px;
+}
+/*CSS FOR DESIGN PART*/
+/* playing now */
+.Insert1 {
+padding:3px;
+border-bottom: 2px dashed #000;
+}
+/* playing next */
+.Insert2 {
+padding:3px;
+border-bottom: 2px dashed #000;
+}
+/* queue */
+.Insert3 {
+padding:3px;
+
+border-bottom: 2px dashed #000;
+}
+/* titles */
+.Insertheader {
+padding:3px;
+
+border-bottom: 2px dashed #000;
+}
+/*CSS FOR FONT STYLE*/
+.author {
+color: #000000;
+
+}
+.title {
+color: #000000;
+
+}
+.categorie {
+color: #000000;
+
+}
+.user {
+color: #000000;
+
+}
+.rank {
+color: #000000;
+
+}
+.song {
+color: #000000;
+
+}
+.comment {
+color: #000
+text-align: justify;
+font-style: italic;
+
+}
+.newscomments {
+color: #000;
+text-align: right;
+
+}
+.subject {
+color: #000;
+
+}
+.warning {
+color: #000;
+font-weight: bold;
+
+}
+/* CSS TO DESIGN BLOCK */
+/* small block LEFT column*/
+.modulesmall {
+}
+.moduletitlesmall {
+height:16px;
+background-color:#000;
+color:#FFF;
+}
+.modulecontentsmall {
+text-align: left;
+padding:3px;
+
+
+}
+.modulecontentsmallcentered {
+text-align: left;
+padding:3px;
+}
+.modulecontentsmalljustified {
+text-align: left;
+padding:3px;
+}
+/* small block right column*/
+.rmodulesmall {
+}
+.rmoduletitlesmall {
+height:16px;
+background-color:#000;
+color:#FFF;
+}
+.rmodulecontentsmall {
+text-align: left;
+padding:3px;
+}
+.rmodulecontentsmallcentered {
+text-align: center;
+padding:3px;
+}
+.rmodulecontentsmalljustify {
+padding:3px;
+text-align: justify;
+}
+.rmodulefootersmall {
+}
+/* BIG block right column (3 or 4 columns layout)*/
+.moduleMedium {
+}
+.moduletitleMedium{
+height:16px;
+background-color:#000;
+color:#FFF;
+}
+.modulecontentMedium {
+text-align: left;
+padding:3px;
+}
+/* BIG block right column (2 columns layout)*/
+.modulebig {
+}
+.moduletitlebig {
+height:16px;
+background-color:#000;
+color:#FFF;
+}
+.modulecontentbig {
+text-align: left;
+padding:3px;
+}
+/* block for popup (magic window, requests etc..)*/
+.pmodulebig {
+}
+.pmoduletitlebig {
+height:16px;
+background-color:#000;
+color:#FFF;
+}
+.pmodulecontentbig {
+text-align: left;
+padding:3px;
+}
+.pmodulecontentbigcentered {
+text-align: center;
+padding:3px;
+}
+/* CSS NEWS */
+.newscontent {
+text-align: justify;
+border-bottom: 2px dashed #000;
+padding:3px;
+}
+/*VARIOUS CSS FOR DESIGN*/
+.ok {
+color: #000;
+font-weight: bold;
+}
+.expandcollapse{
+color: #000;
+text-decoration: none;
+}
+/* CSS TO HIDE DIV DO NOT MODIFY */
+.cachediv {
+height: 1px;
+margin-top: -1px;
+overflow: hidden;
+position: absolute;
+visibility: hidden;
+}
+.cadre {
+border: 2px solid #000000;
+}
+.collapse {
+text-decoration: none;
+}
+
+.approved {
+color: #009900;
+}
+.pending {
+color: #996600;
+}
+.refused {
+color: #990000;
+}
+/* CSS FOR THE DESIGN */
+/*the text at top left*/
+#textleft {
+text-align: left;
+color: Black;
+}
+/*the text at top middle*/
+#textmiddle {
+text-align: center;
+color: Black;
+}
+/*the text at top right*/
+#textright {
+text-align: right;
+color: Black;
+}
+/* CSS FOR DESIGN, do not modify if you don't know what you do */
+/* the screen */
+table.tablecontent{
+width:99%;
+}
+/* center column */
+td.centercontent{
+vertical-align: top;
+padding-left: 3px;
+padding-right: 3px;
+}
+/* left column */
+td.leftcontent{
+width:200px;
+vertical-align: top;
+padding: 0px;
+}
+/* right column */
+td.rightcontent{
+width:200px;
+vertical-align: top;
+padding: 0px;
+}
+/* 2nd right column (ads)*/
+td.rightpubcontent{
+width:200px;
+vertical-align: top;
+text-align: center;
+padding: 0px;

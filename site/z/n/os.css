@@ -1,0 +1,731 @@
+/* MAIN CSS */
+body 
+{
+  background-color: background;
+  color: windowtext;
+  
+  font-family: sans-serif;
+  font-size: 9pt;
+}
+
+hr
+{
+  border-width: 1px; 
+  border-style: sunken;
+  border-color: threedface;
+
+  width: 100%;
+  height: 2px;
+  margin: 10px auto 0 0;
+  text-align: left;
+}
+
+UL
+{
+  padding:0px;
+  margin:20px;
+}
+
+/* links */
+a
+{
+  text-decoration: underline;
+  color: menutext;
+}
+
+a:visited
+{
+}
+
+a:hover
+{
+  background-color: highlight; 
+  color: highlighttext;
+  text-decoration: none;
+}
+
+/* linked picture */
+a img
+{
+  border: 0px;
+}
+
+/* table design */
+table
+{
+}
+
+td
+{
+  font-family: sans-serif;
+  font-size: 9pt;
+}
+
+tr.off
+{
+}
+
+tr.on
+{
+  background-color: highlight;
+}
+
+/* CSS FOR THE HEADER */
+table.tableheader
+{
+  background-color: buttonface;
+
+  border-width: 1px; 
+  border-style: solid;
+  border-color: threedhighlight threedshadow threedshadow threedhighlight;
+
+  padding: 3px;
+}
+
+td.headerlogo
+{
+  background-image: url(/z/n/skin/os/desktop_logo.gif);
+  background-repeat: no-repeat;
+  width:600px;
+  height:100px;
+}
+
+td.headerlinks
+{
+  text-align:center;
+  font-size: 8pt;
+}
+
+td.headerlinks a
+{
+}
+
+td.headererror
+{
+  text-align:left;
+  color: #ff0000;
+  font-weight: bold;
+}
+
+/* CSS FOR THE FOOTER */
+table.tablefooter
+{
+  width: 100%;
+}
+
+td.footer
+{
+  width:100%;
+
+  text-align: center;
+  
+  font-size: 8pt;
+  color: captiontext;
+}
+
+/*FORMS CSS*/
+/*submit for ie*/
+input
+{
+  font-family: sans-serif;
+  font-size: 9pt;
+}          
+
+textarea
+{
+  font-family: sans-serif;
+  font-size: 9pt;
+  width: 90%;
+}
+
+.submit
+{
+  width: 160px;
+}
+
+/*submit for firefox*/
+input[type="submit"]
+{
+  width: 160px;
+}
+
+input[type="password"]
+{
+  width: 160px;
+}
+
+input[type="text"]
+{
+}
+
+select
+{
+  font-family: sans-serif;
+  font-size: 9pt;
+}
+
+form
+{
+  text-align: center;
+}
+
+/*CSS FOR DESIGN PART*/
+/* playing now */
+.Insert1
+{
+  border-width: 2px; 
+  border-style: groove;
+  border-color: threedshadow threedhighlight threedhighlight threedshadow;
+  
+  padding: 10px;
+  
+  margin-top: 4px;
+  
+  text-align: center;
+  
+  letter-spacing: 1px;
+}
+
+/* playing next */
+.Insert2
+{
+  border-width: 2px; 
+  border-style: groove;
+  border-color: threedshadow threedhighlight threedhighlight threedshadow;
+
+  b order-width: 2px;
+  
+  padding: 10px;
+  
+  text-align: center;
+  
+  letter-spacing: 1px;
+}
+
+/* queue */
+.Insert3
+{
+  margin-bottom: 10px; 
+  padding: 4px;
+  
+  font-size: 8pt;
+  
+  text-align: center;
+}
+
+/* titles */
+.Insertheader
+{
+  border-width: 1px; 
+  border-style: solid;
+  border-color: threedshadow threedhighlight threedhighlight threedshadow;
+  
+  padding: 2px;
+  padding-left: 10px;
+  
+  font-weight: bold;
+  
+  margin-bottom: 5px;
+}
+
+/*CSS FOR FONT STYLE*/
+.author
+{
+  text-transform: capitalize;
+}
+
+.title
+{
+  text-transform: capitalize;
+}
+
+.categorie
+{
+}
+
+.user
+{   
+  font-variant: small-caps; 
+}
+
+.rank
+{
+}
+
+.song
+{
+}
+
+.comment
+{
+  text-align: justify;
+  font-style: italic;
+}
+
+.newscomments
+{
+  text-align: right;
+}
+
+.subject
+{
+  letter-spacing: 1px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.warning
+{
+  font-weight: bold;
+  color: infotext;
+}
+
+/* CSS TO DESIGN BLOCK */
+/* small block LEFT column*/
+.modulesmall
+{
+  border-width: 1px; 
+  border-style: solid;
+  border-color: threedhighlight threedshadow threedshadow threedhighlight;
+                                                                              
+  padding: 2px;  
+  
+  background-color: threedface;
+}
+
+.moduletitlesmall
+{
+  background-color: activecaption; 
+
+  color: captiontext;
+  
+  font-weight: bold;
+  text-transform: capitalize;
+  
+  padding: 1px;
+}
+
+
+.moduletitlesmall a:hover
+{
+  background-color: activecaption; 
+}
+
+.modulecontentsmall
+{
+  text-align: left;
+  
+  padding: 6px;
+  
+  margin-top: 3px;
+
+  border-width: 1px; 
+  border-style: solid;
+  border-color: threedshadow threedhighlight threedhighlight threedshadow;
+
+}
+
+.modulecontentsmallcentered
+{
+  border-width: 1px; 
+  border-style: solid;
+  border-color: threedshadow threedhighlight threedhighlight threedshadow;
+
+  padding: 6px;
+  
+  margin-top: 3px;
+
+  text-align: center;
+}
+
+.modulecontentsmalljustified
+{
+  border-width: 1px; 
+  border-style: solid;
+  border-color: threedshadow threedhighlight threedhighlight threedshadow;
+
+  padding: 6px;
+  
+  margin-top: 3px;
+
+  text-align: justify;
+}
+
+.modulefootersmall
+{
+  border-width: 1px; 
+  border-style: sunken;
+  border-color: threedface;
+}
+
+/* small block right column*/
+.rmodulesmall
+{
+  border-width: 1px; 
+  border-style: solid;
+  border-color: threedhighlight threedshadow threedshadow threedhighlight;
+  
+  padding: 2px;
+  
+  background-color: threedface;
+}
+
+.rmoduletitlesmall
+{
+  background-color: activecaption; 
+  color: captiontext;
+
+  padding: 1px;
+
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.rmoduletitlesmall a:hover
+{
+  background-color: activecaption; 
+}
+
+.rmodulecontentsmall
+{
+  padding: 6px;
+  
+  margin-top: 3px;
+  
+  text-align: left;
+
+  border-width: 1px; 
+  border-style: solid;
+  border-color: threedshadow threedhighlight threedhighlight threedshadow;
+
+}
+
+.rmodulecontentsmallcentered
+{
+  border-width: 1px; 
+  border-style: solid;
+  border-color: threedshadow threedhighlight threedhighlight threedshadow;
+
+  padding: 6px;
+  
+  margin-top: 3px;
+
+  text-align: center;
+}
+
+.rmodulecontentsmalljustify
+{
+  border-width: 1px; 
+  border-style: solid;
+  border-color: threedshadow threedhighlight threedhighlight threedshadow;
+
+  padding: 6px;
+  
+  font-size: 8pt;
+
+  margin-top: 3px;
+
+  text-align: justify;
+}
+
+.rmodulefootersmall
+{
+  border-width: 1px; 
+  border-style: sunken;
+  border-color: threedface;
+}
+
+/* BIG block right column (3 or 4 columns layout)*/
+.moduleMedium
+{
+  border-width: 1px; 
+  border-style: solid;
+  border-color: threedhighlight threedshadow threedshadow threedhighlight;
+  
+  padding: 2px;
+  
+  background-color: threedface;
+}
+
+.moduletitleMedium
+{
+  background-color: activecaption; 
+  color: captiontext;
+
+  font-weight: bold;
+
+  text-align: left;
+
+  white-space: nowrap;
+  text-transform: capitalize;
+
+  padding: 1px;
+  
+}
+
+
+.moduletitleMedium a:hover
+{
+  background-color: activecaption; 
+}
+
+.modulecontentMedium
+{
+  padding:3px;
+    
+}
+
+/* BIG block right column (2 columns layout)*/
+.modulebig
+{
+  border-width: 1px; 
+  border-style: solid;
+  border-color: threedhighlight threedshadow threedshadow threedhighlight;
+  
+  padding: 2px;
+  
+  background-color: threedface;
+}
+
+.moduletitlebig
+{
+  background-color: activecaption; 
+  color: captiontext;
+
+  font-weight: bold;
+
+  text-align: left;
+  white-space: nowrap;
+  text-transform: capitalize;
+
+  padding: 1px;
+}              
+
+
+.moduletitlebig a:hover
+{
+  background-color: activecaption; 
+}
+
+.modulecontentbig
+{
+  padding:3px;
+    
+}
+
+/* block for popup (magic window, requests etc..)*/
+.pmodulebig
+{
+  border-width: 1px; 
+  border-style: solid;
+  border-color: threedhighlight threedshadow threedshadow threedhighlight;
+  
+  font-size: 8pt;
+  line-height: 10pt;
+  
+  padding: 2px;
+  
+  background-color: threedface;
+}
+
+.pmodulebig a
+{
+  font-size: 8pt;
+}
+
+.pmoduletitlebig
+{
+  background-color: activecaption; 
+  color: captiontext;
+
+  font-weight: bold;
+
+  padding: 1px;
+
+  text-align: left;
+  white-space: nowrap;
+  text-transform: capitalize;
+}
+
+
+.pmoduletitlebig a:hover
+{
+  background-color: activecaption; 
+}
+
+.pmodulecontentbig
+{
+  padding:3px;
+  text-align: center;	
+}
+
+.pmodulecontentbigcentered
+{
+  text-align: center;
+}
+
+.modulefooterbig
+{
+  border-width: 1px; 
+  border-style: solid;
+  border-color: threedhighlight threedshadow threedshadow threedhighlight;
+  
+  padding: 2px;
+  
+  background-color: threedface;
+}
+
+/* CSS NEWS */
+.newscontent
+{
+  text-align: justify;
+  
+  padding: 3px;
+  padding-left: 10px;  
+  
+  font-size: 8pt;
+}
+
+.newscontent img
+{
+  margin-bottom: 3px;
+  margin-right: 3px;
+  margin-top: 3px;
+}
+
+/*VARIOUS CSS FOR DESIGN*/
+.ok
+{
+  font-weight: bold;
+}
+
+.expandcollapse
+{
+  color: captiontext; 
+}
+
+/* CSS TO HIDE DIV DO NOT MODIFY */
+.cachediv
+{
+  height: 1px;
+  margin-top: -1px;
+  overflow: hidden;
+  position: absolute;
+  visibility: hidden;
+}
+
+.cadre
+{
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+}
+
+.collapse
+{
+  width: 1px;
+  height: 1px;
+}
+
+.collapse img
+{
+  margin-top: 3px;
+  margin-left: 4px;
+  margin-right: 4px;
+
+  width: 7px;
+  height: 7px;
+  overflow: hidden;
+  
+  background-color: threedface;
+
+  border-width: 1px; 
+  border-style: ridge;  
+  border-color: buttonhighlight;
+}
+
+
+.approved
+{
+  font-weight: bold;
+}
+
+.pending
+{  
+  text-decoration: blink;
+}
+
+.refused
+{
+  text-decoration: line-through;
+}
+
+/* CSS FOR THE DESIGN */
+/*the text at top left*/
+#textleft
+{
+  color: background;
+  font-size: 8pt;
+}
+
+/*the text at top middle*/
+#textmiddle
+{
+  text-align: center;
+  letter-spacing: 3px;
+  font-size: 8pt;
+}
+
+#textmiddle a
+{
+  text-decoration: none;
+  font-size: 8pt;
+}
+
+
+/*the text at top right*/
+#textright
+{
+  color: background;
+}
+
+/* CSS FOR DESIGN, do not modify if you don't know what you do */
+/* the screen */
+table.tablecontent
+{
+  width:100%;
+}
+
+/* center column */
+td.centercontent
+{
+  vertical-align: top;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* left column */
+td.leftcontent
+{
+  width:200px;
+  vertical-align: top;
+  padding: 0px;
+}
+
+/* right column */
+td.rightcontent
+{
+  width:200px;
+  vertical-align: top;
+  padding: 0px;
+}
+
+/* 2nd right column (ads)*/
+td.rightpubcontent
+{
+  width:200px;
+  vertical-align: top;
+  text-align: center;
+  padding: 0px;
+}
+<!-- ID3 ipe v0.80b - cs/55 - 00:00.006  no - 6/3/2005 7:36:02 PM / default.css #21 -->
