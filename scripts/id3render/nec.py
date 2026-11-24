@@ -25,6 +25,23 @@ DROP = {"PASSWORD", "DEPARTMENT", "DEPARTMENT_NUM", "IP", "USER_AGENT", "MAILING
         "TOTAL_LOGIN_TIME", "OJUID", "SEX_SIZE", "LOGIN", "COOKIE", "IP_ADDR", "SALT", "USER_CODE"}
 
 
+USER_TEXT = {"COMMENT", "TXT", "SENTENCE"}       # free text typed by listeners
+SAFE_TAG = re.compile(r"(?i)</?(?:b|i|u|br|strong|em)\s*/?>|</a\s*>|<a\s+href\s*=\s*\"https?://[^\"<>\s]*\"\s*>")
+
+
+def user_text(v):
+    """Listeners' texts were shown as typed: simple formatting and http(s) links are kept, any
+    other `<` is shown as text (`<Jeff>` in pasted IRC logs), so no script or handler survives."""
+    v = re.sub(r"(?i)\b(ftp|https?)://[^/@\s\"'<>]*:[^/@\s\"'<>]*@", r"\1://", v)     # no user:password@ in URLs
+    out, pos = [], 0
+    for m in SAFE_TAG.finditer(v):
+        out.append(v[pos:m.start()].replace("<", "&lt;").replace(">", "&gt;"))
+        out.append(m.group(0))
+        pos = m.end()
+    out.append(v[pos:].replace("<", "&lt;").replace(">", "&gt;"))
+    return "".join(out)
+
+
 def redact(row):
     out = {}
     for k, v in row.items():
@@ -33,6 +50,8 @@ def redact(row):
             continue
         if K in ("BIRTHYEAR", "DT_BIRTH"):
             v = MASK if v not in (None, "", 0) else None
+        elif K in USER_TEXT and isinstance(v, str):
+            v = user_text(v)
         elif K == "HOSTNAME":
             v = MASK if v else v
         elif K in ("EMAIL", "AUTHOR_EMAIL") and v:
@@ -52,7 +71,7 @@ class DB:
     # 300 MB) and indexed there; the files are never written.
     INDEXES = ["TITLES(id)", "TITLES(auteur)", "PLAYLIST(dt_play)", "PLAYLIST(idsong)", "VOTES(idsong)", "VOTES(idnick)",
                "COMMENTS(idsong)", "COMMENTS(idnick)", "REQUESTS(idsong)", "REQUESTS(idnick)", "REQUESTS(dt)",
-               "ONELINER(auteur)", "ONELINER(dt)", "FAVOURITES(idsong)", "FAVOURITES(idnick)", "PARTY(idsong)",
+               "ONELINER(auteur)", "ONELINER(dt)", "ONELINER(substr(dt, 1, 10))", "FAVOURITES(idsong)", "FAVOURITES(idnick)", "PARTY(idsong)",
                "NEWSCOMMENTS(idnews)", "NEWS(idnews)", "RELATION(author_name)", "oj.PEOPLE(id)", "oj.LINKS(id)",
                "oj.COUNTRIES(id)", "oj.PARTIES(id)"]
 
@@ -72,7 +91,7 @@ class DB:
         self.con.execute("DETACH DATABASE ojsrc")
         for i, ix in enumerate(self.INDEXES):
             schema, _, rest = ix.rpartition(".")
-            table, col = rest[:-1].split("(")
+            table, col = rest[:-1].split("(", 1)
             self.con.execute(f"CREATE INDEX {schema + '.' if schema else ''}ix{i} ON {table}({col})")
         self.con.row_factory = sqlite3.Row
         self.now = now
@@ -234,7 +253,9 @@ class NecMacros:
         return fn(a, page)
 
     def e_nec_datenow(self, a, page):
-        page.dic["NEC:DATENOW:DATE"] = self.now
+        page.dic["NEC:DATENOW:DA"] = self.now.day
+        page.dic["NEC:DATENOW:MO"] = self.now.month
+        page.dic["NEC:DATENOW:YE"] = self.now.year
         return None
 
     def e_nec_stats(self, a, page):
@@ -519,7 +540,21 @@ class NecMacros:
         return None         # played-songs history by day: a form of the live site
 
     def b_nec_onelinerhisto(self, a, page):
-        return None         # oneliner history by day: a form of the live site
+        """Oneliner of one day (`olhistory.htm?m=&d=&y=`), newest first."""
+        m, d, y = (page.req.get(k) for k in ("m", "d", "y"))
+        if not (is_int(m) and is_int(d) and is_int(y)):
+            return None
+        day = f"{int(y):04d}-{int(m):02d}-{int(d):02d}"
+        return self.db.rows("SELECT o.dt, p.nick, c.flag, o.sentence FROM ONELINER o LEFT JOIN oj.PEOPLE p ON p.id = o.auteur"
+                            " LEFT JOIN oj.COUNTRIES c ON c.id = p.idcountry WHERE substr(o.dt, 1, 10) = ? ORDER BY o.id DESC",
+                            (day,))
+
+    def oneliner_days(self):
+        """Days that have oneliner messages, oldest first, as (year, month, day)."""
+        if "OLDAYS" not in self.cache:
+            self.cache["OLDAYS"] = [tuple(int(x) for x in r[0].split("-")) for r in
+                                    self.db.con.execute("SELECT DISTINCT substr(dt, 1, 10) FROM ONELINER ORDER BY 1")]
+        return self.cache["OLDAYS"]
 
     def b_nec_muri(self, a, page):
         return []           # last referers: web statistics database, not kept

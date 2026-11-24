@@ -45,8 +45,13 @@ per page.
 | `B:NEC:ONELINER`, `REQUESTLIST`, `LAST5SONG`, `BIRTHDAY` | ONELINER, REQUESTS, TITLES, PEOPLE | home page boxes, on the frozen clock |
 | `E:NEC:PLAYEDSONG`, `NEXTSONG` | INFO | the last song played and the next one, shown off the air (`00:00 left`) |
 | `E:NEC:NICK` | PEOPLE | people sheet, same fields and masks as OrangeJuiceV3 |
+| `B:NEC:ONELINERHISTO` | ONELINER, PEOPLE | oneliner of one day (`/olhistory-y2006-m9-d7.htm`, 1,791 days): nick, country, time, message; the day picker (a form) becomes previous / next day links and `/olhistory-days.htm` |
 
-Not rendered (anonymous visitor of a read-only site): session, login, admin, write and upload
+Listeners' texts (oneliner, song and news comments) keep simple formatting (`b`, `i`, `u`,
+`br`, http links); any other `<` is shown as text, so no script or handler of a visitor survives.
+
+Not rendered (anonymous visitor of a read-only site): played-songs history by day (owner
+decision 2026-11-24), session, login, admin, write and upload
 macros, DJ sessions, private messages, listener statistics (frozen at 0), web statistics
 (`VISITS`, `MURI`: database not kept), logged-in list, queue (empty), forums.
 

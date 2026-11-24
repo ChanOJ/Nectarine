@@ -105,11 +105,11 @@ REMOVED = {
     "rename.htm", "reported.htm", "req.htm", "reqdj.htm", "sam.htm", "sam2.htm", "sendsession.htm", "test.htm",
     "teststats.htm", "updatevalidationprocess.htm", "updmember.htm", "upload.htm", "validation2.htm", "validation3.htm",
     "vote.htm", "voteerror.htm", "voteok.htm", "votepopup.htm", "xchange.htm", "refused.htm", "quarion.htm",
-    "nodemo.htm", "noplatform.htm", "stats.htm", "stats2.htm", "queue.htm", "infokb.htm", "listtable.htm",
+    "nodemo.htm", "noplatform.htm", "plshistory.htm", "stats.htm", "stats2.htm", "queue.htm", "infokb.htm", "listtable.htm",
 }
 # Query parameters that select content (kept, in this order, in the static name); paging
 # parameters (<LOOP>pg) are kept too. Every other parameter is dropped.
-QUERY_KEYS = {"idsong": "song", "id": "id", "author": "author", "cat": "cat"}
+QUERY_KEYS = {"idsong": "song", "id": "id", "author": "author", "cat": "cat", "y": "y", "m": "m", "d": "d"}
 # Parameters of the original searches: the link goes to the client-side search page
 SEARCH_KEYS = {"recherche": "songs", "sl": None, "q": None}
 # The stream relays of the radio (gone): links to them are removed, like any .pls playlist
@@ -574,6 +574,8 @@ def neutralize_forms(text, site, out):
     get an 'archived' notice; leftover unpaired form tags are removed."""
     def fn(m):
         attrs, inner = m.group(1), m.group(2)
+        if re.search(r"(?i)action\s*=\s*[\"']?olhistory\.htm", attrs):
+            return oneliner_nav(site, out)  # the day picker of the oneliner history: links instead
         if re.search(r"(?is)<input\b[^>]*type\s*=\s*[\"']?password", inner):
             site.dropped.append((out, "login form"))
             return ""               # login box: nothing left of it
@@ -607,6 +609,43 @@ def neutralize_forms(text, site, out):
     # scripts of the removed forms (find(), focus())
     text = re.sub(r"(?is)<script[^>]*>\s*<!--\s*function find\(\).*?</script\s*>", "", text)
     return re.sub(r"(?is)<script[^>]*>\s*<!--\s*document\.\w+\.\w+\.focus\(\);?\s*//\s*-->\s*</script>", "", text)
+
+
+MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October",
+          "November", "December"]
+
+
+def oneliner_url(day):
+    y, m, d = day     # the URL of the live site (the crawl gives it its static name)
+    return f"/olhistory.htm?m={m}&amp;d={d}&amp;y={y}"
+
+
+def oneliner_nav(site, out):
+    """Day picker of /olhistory.htm (a GET form): previous and next day with messages, and the
+    list of all days (/olhistory-days.htm)."""
+    days = site.macros.oneliner_days()
+    mm = re.search(r"-y(\d+)-m(\d+)-d(\d+)\.htm$", out)
+    links = []
+    if mm:
+        cur = tuple(int(x) for x in mm.groups())
+        before = [d for d in days if d < cur]
+        after = [d for d in days if d > cur]
+        if before:
+            links.append(f'<a href="{oneliner_url(before[-1])}">&lt; {before[-1][2]:02d}/{before[-1][1]:02d}/{before[-1][0]}</a>')
+        if after:
+            links.append(f'<a href="{oneliner_url(after[0])}">{after[0][2]:02d}/{after[0][1]:02d}/{after[0][0]} &gt;</a>')
+    links.append('<a href="/olhistory-days.htm">All the days of the oneliner</a>')
+    return " &nbsp;|&nbsp; ".join(links)
+
+
+def oneliner_days_body(days):
+    out, cur = [], None
+    for y, m, d in reversed(days):
+        if (y, m) != cur:
+            out.append(f'{"</p>" if cur else ""}<p><span class="warning">{MONTHS[m - 1]} {y}</span><br>')
+            cur = (y, m)
+        out.append(f'<a href="{oneliner_url((y, m, d))}">{d:02d}</a> ')
+    return "".join(out) + "</p>"
 
 
 def search_widget(kind, size=18):
@@ -718,7 +757,7 @@ def write_js(out):
 
 
 # --- main -----------------------------------------------------------------------------------------
-SEEDS = ["/index.htm", "/archived.htm", "/themes.htm", "/nec-search.htm", "/404.htm"]
+SEEDS = ["/index.htm", "/archived.htm", "/themes.htm", "/nec-search.htm", "/404.htm", "/olhistory-days.htm"]
 
 
 def song_seeds(db):
@@ -734,6 +773,8 @@ def build(out, raw, jsv):
     photos = sorted(p.name.lower() for p in (RAW / "id3" / "zi" / "nicks").iterdir() if p.is_file())
     macros = nec.NecMacros(db, photos)
     site = Site(None, DEFAULT_SKIN, "", macros, SKINS)
+    site.files.virtual["olhistory-days.htm"] = FRAME % {"title": "Oneliner history",
+                                                       "body": oneliner_days_body(macros.oneliner_days())}
     site.crawl(SEEDS, song_seeds(db))
     for p, text in sorted(site.pages.items()):
         dst = out / p.lstrip("/")

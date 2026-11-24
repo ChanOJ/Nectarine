@@ -58,6 +58,8 @@ const cases = [
   ["/authors.htm?author=a", "/authors-authora.htm"],
   ["/research.htm?author=4+Mat", "/research-author4-mat-7db735.htm"],
   ["/research.htm?author=4%20Mat", "/research-author4-mat-7db735.htm"],
+  ["/olhistory.htm?m=9&d=7&y=2006", "/olhistory-y2006-m9-d7.htm"],
+  ["/plshistory.htm?year=2006&month=9&day=7", "/archived.htm"],
   ["/chartsuser.htm?id=5", "/chartsuser-id5.htm"], ["/chartsuser.htm?id=6", "/archived.htm"],
   // searches, counters, removed pages
   ["/research.htm?type=1", "/nec-search.htm?t=songs"],

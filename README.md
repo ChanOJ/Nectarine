@@ -40,7 +40,7 @@ credentials and is never published; only rendered pages and the files they refer
 
 - Kept: home page (frozen on the last song played), every song page (18,508) with its votes,
   comments and party rankings, authors by letter and their songs, author information, song and
-  user charts, news and their comments, FAQ, listen, credits, links.
+  user charts, news and their comments, the oneliner day by day, FAQ, listen, credits, links.
 - The 15 colour themes of the site (chosen per account on the live site) are offered on
   `/themes.htm` and kept in the browser (localStorage, no cookie).
 - Removed: logins, requests, votes, comments, uploads, favourites, DJ sessions, private messages,
