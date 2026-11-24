@@ -101,3 +101,9 @@ Emergency only, deploy from the Mac (Proton Pass CLI logged in):
 ```bash
 scripts/publish.sh --no-build --deploy
 ```
+
+## To Do
+
+Cross-links to fix in a batch pass (the targets are archived on `sauthier.family`; rewrite the `href`s):
+
+- `www.ojuice.net` (59,098 links in 58,986 files, a template link): Orange Juice v3 (https://orangejuicev3.sauthier.family). Touches almost every file, so a near-full redeploy.
