@@ -729,3 +729,5 @@ td.rightpubcontent
   padding: 0px;
 }
 <!-- ID3 ipe v0.80b - cs/55 - 00:00.006  no - 6/3/2005 7:36:02 PM / default.css #21 -->
+
+table.tableheader{width:99%;margin-left:5px;margin-right:5px}

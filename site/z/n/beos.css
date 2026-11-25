@@ -472,3 +472,5 @@ text-align: center;
 padding: 0px;
 font:11px sans-serif;
 }
+
+table.tableheader{width:99%;margin-left:5px;margin-right:5px}
