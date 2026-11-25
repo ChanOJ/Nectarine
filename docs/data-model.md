@@ -80,8 +80,8 @@ rules (slug included) and its test checks every entry.
 - Columns never handed to a template (`nec.py` `redact`): passwords, logins, IPs, host names, user
   agents, departments, birth years (`????`), e-mail domains (`local@????`), skin and status of the
   account, payment ids.
-- Output: no `mailto:` (except the removal-request footer), no e-mail address, IPv4 masked, FTP
+- Output: no `mailto:` (except the removal-request footer), no e-mail address, public IPv4 masked, two login/password strings redacted, FTP
   credentials and the stream server address never rendered (admin blocks), Google Analytics and
-  AdSense scripts removed, pouet.net screenshots (third-party images) removed.
+  AdSense scripts removed; third-party pictures are kept as links (pouet.net screenshots) except those of dead hosts.
 - Not published at all: donations and the donors list, the guestbook, the member list, private
   messages, the forums (pending a privacy review).
