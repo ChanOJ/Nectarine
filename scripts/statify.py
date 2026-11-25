@@ -70,20 +70,25 @@ THEMES = [("default", "Default"), ("gem", "GEM"), ("amiga", "Amiga 2.0"), ("amig
           ("newspaper", "Newspaper"), ("kohina", "Kohina"), ("irix", "Irix"), ("beos", "BeOS"), ("atari8", "Atari 8-bit"),
           ("amiga2", "Amiga 2"), ("os", "OS"), ("pouet", "Pouet"), ("phpbb", "phpBB"), ("sand", "Sand")]
 
-# ---- removal-request footer (same as the other archives): nearly every Nectarine page shows
-# nicknames (oneliner, requests, votes, comments, charts, birthdays), so every page gets it.
+# ---- removal-request footer: only on pages that show personal data (a family name, a postal address
+# or an e-mail local part in clear, `local@????`); nick-only pages do not carry it.
 REMOVAL_MARK = 'id="removal-note"'
 REMOVAL_NOTE = (
-    '<div id="removal-note" style="clear:both;margin:28px auto 8px;padding:6px 8px 0;width:60%;'
+    '<div id="removal-note" style="clear:both;margin:28px auto 8px;padding:6px 8px 0;width:99%;'
     'border-top:1px solid #808080;text-align:center;font:10px/14px Verdana,Arial,Helvetica,sans-serif;'
     'color:#808080;background:transparent">To be removed from this page, '
-    '<a href="mailto:chandra_oj@pm.me" style="color:#808080;text-decoration:underline">contact me</a>.</div>'
+    '<a href="mailto:chandra_oj&#64;pm.me" style="color:#808080;text-decoration:underline">contact me</a>.</div>'
 )
+PERSONAL_RE = re.compile(r"[A-Za-z0-9]@\?\?\?\?|<span class=\"subject\">Name :</span>\s*[^<\s]")
+
+
+def needs_removal_note(text):
+    return bool(PERSONAL_RE.search(text))
 _BODY_END = re.compile(r"(?is)</body\s*>(?!.*</body\s*>)")
 
 
 def add_removal_note(text):
-    if REMOVAL_MARK in text:
+    if REMOVAL_MARK in text or not needs_removal_note(text):
         return text
     m = _BODY_END.search(text)
     if m:
@@ -113,9 +118,13 @@ QUERY_KEYS = {"idsong": "song", "id": "id", "author": "author", "cat": "cat", "y
 # Parameters of the original searches: the link goes to the client-side search page
 SEARCH_KEYS = {"recherche": "songs", "sl": None, "q": None}
 # The stream relays of the radio (gone): links to them are removed, like any .pls playlist
-RELAY_HOSTS = ("ipsyn.net", "oulu.fi", "alldas.org", "esuna.co.uk", "sexes.ch", "scenemusic.eu", "streamer.org")
-DEAD_HOSTS = RELAY_HOSTS + ("mirabilis.com", "icq.com", "google-analytics.com", "googlesyndication.com", "amazon.com",
-              "paypal.com", "soundbomb.net")
+# Links removed on purpose: counters, ad/analytics hosts and the ICQ presence service. Everything else (dead hosts included) stays a link with its original href.
+DEAD_HOSTS = ("mirabilis.com", "google-analytics.com", "googlesyndication.com")
+# Own sister site: the old Orange Juice host is gone, its archive lives here (decision 2026-11-24)
+OJUICE_HOSTS = ("www.ojuice.net", "ojuice.net")
+OJUICE_NEW = "https://orangejuicev3.sauthier.family"
+# A link written without scheme ("www.nutman.dk", "timbral.dhs.nu/x") was read as relative by the browser
+SCHEMELESS_RE = re.compile(r"(?i)^(?:www\.[\w-]+(?:\.[\w-]+)+|[\w-]+(?:\.[\w-]+)*\.(?:com|net|org|info|de|dk|cz|nu|tk|fr|ch|uk|fi|it|nl|se|no|pl|ru|ca|us|eu|es|at|be))(?:[/:?#].*)?$")
 
 
 # Pictures the final skin references but lacks (broken on the live site): the copy of the older skin
@@ -241,6 +250,7 @@ class Site:
         self.dropped = []
         self.url_map = {}          # original URL with query -> static path
         self.unknown_filters = set()
+        self.extra_assets = {}      # published path -> raw path (pictures of the sister skin)
 
     # -- requests -----------------------------------------------------------------------------
     def resolve(self, url, base):
@@ -265,6 +275,8 @@ class Site:
             return url, "external"
         if low.startswith("//"):
             url = "http:" + url
+        elif SCHEMELESS_RE.match(url):
+            url = "http://" + url
         try:
             sp = urlsplit(urljoin("http://%s%s" % (HOST, base), url))
             sp.hostname
@@ -272,8 +284,8 @@ class Site:
             return None, "malformed URL"
         host = (sp.hostname or "").lower()
         if host not in OWN_HOSTS:
-            if host in ("forums.scenemusic.net", "forums.scenemusic.org"):
-                return None, "forums not archived"
+            if host in OJUICE_HOSTS:     # same page on the sister archive when it exists there, else its home
+                return OJUICE_NEW + (sp.path if re.fullmatch(r"/(?:\d+/(?:nick|article)|bannersexchg)\.htm|/\d+/(?:nick|article)\.htm", sp.path) else ""), "external"
             if any(host == h or host.endswith("." + h) for h in DEAD_HOSTS):
                 return None, "dead third party"
             return url, "external"
@@ -441,11 +453,12 @@ class Site:
 
     def finalize(self, text, base, out):
         text = remove_dead_scripts(text)
+        text = page_title(fix_head(text))
         # the colour themes (chosen per account on the live site): a link in the top menu
         text = text.replace('<a href="/credits.htm">Credits</a>',
                             '<a href="/credits.htm">Credits</a>\r\n&nbsp;&raquo;&nbsp;<a href="/themes.htm">Themes</a>', 1)
-        # "On air": the stream relays are gone, the box says so
-        text = re.sub(r'(?is)<span class="subject">Main Relays, Click on a flag.*?<br/><br/>', OFF_AIR, text)
+        # "On air": the relay flags stay (original links, dead), a note says the station is off the air
+        text = re.sub(r'(?is)(<span class="subject">Main Relays, Click on a flag.*?<br/><br/>)', lambda m: m.group(1) + OFF_AIR, text)
         # the "help Nectarine" donation popup, shown once per visitor through a cookie
         text = re.sub(r"(?is)<script\b[^>]*>(?:(?!</script).)*dejapopup.*?</script\s*>", "", text)
         text = neutralize_forms(text, self, out)
@@ -454,7 +467,7 @@ class Site:
         text = self.sweep_own_host(text, base)
         text = redact_emails(text)
         text = re.sub(r"/\*setTimeout\(.*?\*/", "", text)     # the disabled auto-refresh of every page
-        text = mask_ips(text)
+        text = mask_ips(redact_secrets(text))
         text = re.sub(r"(?i)(charset\s*=\s*)(?:windows-1252|cp1252|us-ascii|(?=[\"'>\s]))", r"\1iso-8859-1", text)
         if JS not in text:
             tag = f'<SCRIPT src="{JS}"></SCRIPT>\r\n'
@@ -500,8 +513,13 @@ class Site:
             def one(am):
                 val = next(g for g in am.groups()[1:] if g is not None)
                 new, why = self.resolve(val, base)
+                om = re.match(r"(?i)^\s*(?:https?:)?//(?:www\.)?ojuice\.net/z/o/pic/([\w.-]+\.(?:jpg|gif|png))\s*$", val)
+                if om and am.group(1).lower() == "src":     # a picture of the old Orange Juice host: copied from the raw store (the sister archive refuses hotlinking: CORP same-origin)
+                    self.extra_assets["/z/n/p/" + om.group(1)] = "/z/om/p/" + om.group(1)
+                    return 'src="/z/n/p/%s"' % om.group(1)
                 if why == "external":
-                    if am.group(1).lower() in ("src", "background", "lowsrc") and re.match(r"(?i)^\s*(https?:)?//", val):
+                    if (am.group(1).lower() in ("src", "background", "lowsrc") and re.match(r"(?i)^\s*(https?:)?//", val)
+                            and not re.match(r"(?i)^\s*(https?:)?//(?:(?:www\.)?pouet\.net/|www\.madtracker\.org/img/focus_radio\.gif)", val)):
                         drop.append(val)
                     if new != html.unescape(val.strip()):     # a redirector resolved to its target
                         return '%s="%s"' % (am.group(1), html.escape(new, quote=True).replace("&#x27;", "'"))
@@ -551,6 +569,38 @@ def icq_badges(text, skin, sheet):
                  f'alt="ICQ #{m.group(1)}" title="ICQ #{m.group(1)}">')
         return f"{badge} <FONT class=aslink>{m.group(1)}</FONT>" if sheet else badge
     return ICQ_RE.sub(fn, text)
+
+
+SKIN_SCRIPTS = ("script.js", "sortabletable.js", "uscurrencysorttype.js")
+# Treatment of the site owner's family name and city (original <head> comment and footer credit)
+OWNER_FULL = "Christophe Le Sage"
+OWNER_PUBLIC = "Christophe"
+
+
+def fix_head(text):
+    """Skin scripts are served from /z/n/ (the template loaded them relative to its own folder);
+    the Urchin/Google Analytics snippet is gone; the owner's family name and city are removed."""
+    for name in SKIN_SCRIPTS:
+        text = re.sub(r"""(?i)(<script\b[^>]*\bsrc\s*=\s*["'])%s(["'])""" % re.escape(name), r"\1/z/n/%s\2" % name, text)
+    text = re.sub(r"(?is)<script\b[^>]*>\s*_uacct\s*=[^<]*</script\s*>\s*", "", text)
+    text = text.replace("is owned by Christophe Le Sage, Paris, France.", "is owned by %s." % OWNER_PUBLIC)
+    text = re.sub(r'(?is)<meta\s+http-equiv="?refresh"?[^>]*>', "", text)
+    return re.sub(r"Year of Birth \(YYYY\) :&nbsp;\?\?\?\?<br>\s*", "", text)     # empty on every sheet (years are not published)
+
+
+GENERIC_TITLE = re.compile(r"(?is)<title>\s*Nectarine Radio Station- http://www\.scenemusic\.net - Your Demoscene Radio\s*</title>")
+
+
+def page_title(text):
+    """Most pages shared one title: use the heading of their first box."""
+    m = re.search(r'(?is)<div class="moduleTitlebig">(.*?)</div>', text)
+    if not m or not GENERIC_TITLE.search(text):
+        return text
+    t = html.unescape(re.sub(r"(?s)<[^>]*>", " ", m.group(1)))
+    t = re.sub(r"\s+", " ", t).strip()
+    if not t:
+        return text
+    return GENERIC_TITLE.sub(lambda _: "<TITLE>%s - Nectarine, your demoscene radio</TITLE>" % html.escape(t, quote=False), text, count=1)
 
 
 def remove_dead_scripts(text):
@@ -666,12 +716,26 @@ def redact_emails(text):
 IPV4 = re.compile(r"(?<![\d.])(?:(?:25[0-5]|2[0-4]\d|1?\d?\d)\.){3}(?:25[0-5]|2[0-4]\d|1?\d?\d)(?![\d.])")
 
 
+PRIVATE_IP = re.compile(r"^(?:10\.|127\.|192\.168\.|172\.(?:1[6-9]|2\d|3[01])\.)")
+
+
 def mask_ips(text):
-    """IPv4 addresses are masked unless they are the host of a URL (public servers of the time)."""
-    def fn(m):
-        before = text[max(0, m.start() - 12):m.start()].lower()
-        return m.group(0) if before.endswith(("://", "@")) else MASK
-    return IPV4.sub(fn, text)
+    """Public IPv4 addresses are masked everywhere (text, link text, hrefs); a link whose address was
+    masked loses its anchor (the label stays). Private/LAN addresses are kept."""
+    text = IPV4.sub(lambda m: m.group(0) if PRIVATE_IP.match(m.group(0)) else MASK, text)
+    return re.sub(r"(?is)<a\b[^>]*href\s*=\s*[\"']?[a-z]+://[^\"'\s>]*\?\?\?\?[^>]*>(.*?)</a\s*>", r"\1", text)
+
+
+SECRET_RES = [
+    (re.compile(r"(?i)\((?:user|login): *\S+ */ *(?:pwd|pass|password): *\S+\)"), "(login and password removed)"),
+    (re.compile(r"(?i)pass and log *: *\w+\.*"), "pass and log: (removed)"),
+]
+
+
+def redact_secrets(text):
+    for rx, repl in SECRET_RES:
+        text = rx.sub(repl, text)
+    return text
 
 
 def encode_page(text):
@@ -728,7 +792,8 @@ def rewrite_css(site, path, text):
             return "url()"
         new = site.asset(unquote(sp.path))
         return f"url({new})" if new else "url()"
-    return re.sub(r"(?i)url\(\s*([\"']?)([^\"')]*)\1\s*\)", fn, text)
+    text = re.sub(r"(?i)url\(\s*([\"']?)([^\"')]*)\1\s*\)", fn, text)
+    return text + "\r\ntable.tableheader{width:99%;margin-left:5px;margin-right:5px}\r\n"     # same box as table.tablecontent (the header followed its content width: short on wide screens)
 
 
 def transform_asset(path, data):
@@ -819,6 +884,10 @@ def main(argv=None):
         dst.parent.mkdir(parents=True, exist_ok=True)
         data = css_text[p].encode("cp1252") if p in css_text else (raw / "id3" / p.lstrip("/")).read_bytes()
         dst.write_bytes(transform_asset(p, data))
+    for pub, src in sorted(site.extra_assets.items()):
+        dst = out / pub.lstrip("/")
+        dst.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(raw / "id3" / src.lstrip("/"), dst)
     hosting = REPO / "hosting"
     hosting.mkdir(exist_ok=True)
     shutil.copyfile(out / "404.htm", hosting / "404.html")
@@ -835,6 +904,11 @@ def main(argv=None):
             agg[(link, why)] = (n + 1, min(first, page))
         for (link, why), (n, first) in sorted(agg.items()):
             f.write(f"{link}\t{why}\t{n}\t{first}\n")
+    import collections
+    kinds = collections.Counter(re.sub(r"\d+", "N", w.split(" ")[0] + " " + " ".join(w.split(" ")[1:2])) for _, w in site.dropped)
+    print("dropped:", dict(kinds.most_common(30)))
+    for u in sorted({w.split(" ", 1)[1] for _, w in site.dropped if w.startswith("img http") and "pouet.net" not in w}):
+        print("IMG", u)
     print(f"assets: {len(site.assets)}")
     import seo
     seo.main(["--site", str(out)])

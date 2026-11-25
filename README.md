@@ -47,7 +47,7 @@ credentials and is never published; only rendered pages and the files they refer
   admin pages, the guestbook, the member list, the list of donors, listener statistics (frozen
   at 0), the stream relays (the station is shown off the air), ads and analytics, pouet.net
   screenshots (third-party images), the forums (Web Wiz Forums, not archived).
-- Every page ends with "To be removed from this page, contact me." (pages show nicknames).
+- Removal-request footer ("To be removed from this page, contact me.") only on the pages that show a real name or an e-mail local part (`local@????`): author sheets, nick sheets with a name, some comments and oneliner days. Public IP addresses and the few logins/passwords found in texts are masked.
 
 ## Regenerating `site/`
 
@@ -101,9 +101,3 @@ Emergency only, deploy from the Mac (Proton Pass CLI logged in):
 ```bash
 scripts/publish.sh --no-build --deploy
 ```
-
-## To Do
-
-Cross-links to fix in a batch pass (the targets are archived on `sauthier.family`; rewrite the `href`s):
-
-- `www.ojuice.net` (59,098 links in 58,986 files, a template link): Orange Juice v3 (https://orangejuicev3.sauthier.family). Touches almost every file, so a near-full redeploy.
