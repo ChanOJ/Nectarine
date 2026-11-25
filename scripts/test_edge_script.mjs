@@ -66,6 +66,11 @@ const cases = [
   ["/research.htm?recherche=amiga&type=1", "/nec-search.htm?t=songs&q=amiga"],
   ["/upload.htm", null], ["/upload.htm?x=1", "/archived.htm"], ["/nick_edit.htm?x=1", "/archived.htm"],
   ["/golink.htm?url=http%3a%2f%2fevil.example%2f", 404], ["/golink.htm?id=1", 404],
+  // open redirect: a target path starting with // or /\ must not become a protocol-relative Location
+  ["/golink.htm?url=http://www.scenemusic.net//example.org/x", 404], ["/golink.htm?url=http://www.scenemusic.net/\\example.org/x", 404],
+  ["/golink.htm?url=http://www.scenemusic.net/%5Cexample.org/x", 404], ["/golink.htm?url=http://www.scenemusic.net///x", 404],
+  ["/golink.htm?url=http://www.scenemusic.net%2F%2Fexample.org/x", 404],
+  ["/golink.htm?url=http://www.scenemusic.net/ok.htm", "/ok.htm"],
   ["/golink.htm?url=http%3a%2f%2fwww.scenemusic.net%2finfo.htm%3fidsong%3d51362", "/info-song51362.htm"],
 ];
 for (const [old, want] of cases) expect(old, want);
