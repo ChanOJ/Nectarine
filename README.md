@@ -43,10 +43,11 @@ credentials and is never published; only rendered pages and the files they refer
   user charts, news and their comments, the oneliner day by day, FAQ, listen, credits, links.
 - The 15 colour themes of the site (chosen per account on the live site) are offered on
   `/themes.htm` and kept in the browser (localStorage, no cookie).
-- Removed: logins, requests, votes, comments, uploads, favourites, DJ sessions, private messages,
+- Removed: logins, requests, voting, commenting, uploads, favourites, DJ sessions, private messages,
   admin pages, the guestbook, the member list, the list of donors, listener statistics (frozen
-  at 0), the stream relays (the station is shown off the air), ads and analytics, pouet.net
-  screenshots (third-party images), the forums (Web Wiz Forums, not archived).
+  at 0), the PayPal and newsletter forms, ads and analytics. Kept as they were, even though the
+  hosts are mostly gone: the relay playlist links ("Main Relays", with a note that the station is
+  off the air), the forum link and the other external links; votes by person are shown.
 - Removal-request footer ("To be removed from this page, contact me.") only on the pages that show a real name or an e-mail local part (`local@????`): author sheets, nick sheets with a name, some comments and oneliner days. Public IP addresses and the few logins/passwords found in texts are masked.
 
 ## Regenerating `site/`
