@@ -73,6 +73,11 @@ const DATA = {blob};
 const REMOVED = new Set(DATA.removed);
 const HOSTS = new Set(DATA.hosts);
 const NOT_FOUND = {{ status: 404 }};
+function foreign(pathname) {{
+  let d;
+  try {{ d = decodeURIComponent(pathname); }} catch (e) {{ d = pathname; }}
+  return /^[\\/\\\\]{{2}}/.test(d);   // "//host" or "/\\host": a protocol-relative URL once in Location
+}}
 const moved = (location) => ({{ status: 301, location }});
 const CP1252 = "\\u20ac\\u0081\\u201a\\u0192\\u201e\\u2026\\u2020\\u2021\\u02c6\\u2030\\u0160\\u2039\\u0152\\u008d\\u017d\\u008f" +
   "\\u0090\\u2018\\u2019\\u201c\\u201d\\u2022\\u2013\\u2014\\u02dc\\u2122\\u0161\\u203a\\u0153\\u009d\\u017e\\u0178";
@@ -138,6 +143,7 @@ function resolve(pathname, search, depth = 0) {{
     let t;
     try {{ t = new URL(u, "http://www.scenemusic.net/"); }} catch (e) {{ return NOT_FOUND; }}
     if (!HOSTS.has(t.hostname.toLowerCase())) return NOT_FOUND;
+    if (foreign(t.pathname)) return NOT_FOUND;
     return resolve(t.pathname, t.search, depth + 1) || moved(prefix + t.pathname);
   }}
   if (REMOVED.has(name)) return moved(prefix + DATA.archived);
@@ -177,7 +183,7 @@ BunnySDK.net.http.servePullZone().onOriginRequest((ctx) => {{
   if (r.status === 301) {{
     return Promise.resolve(new Response(null, {{
       status: 301,
-      headers: {{ Location: r.location, "Cache-Control": "public, max-age=86400" }},
+      headers: {{ Location: url.origin + r.location, "Cache-Control": "public, max-age=86400" }},
     }}));
   }}
   // A path that never exists in the storage zone: the origin answers with its custom 404 page.
